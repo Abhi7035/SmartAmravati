@@ -33,7 +33,7 @@ public class Page0 extends AppCompatActivity implements View.OnClickListener {
         }
         if (view==button3)
         {
-            Intent tp2=new Intent(Page0.this,Department.class);
+            Intent tp2=new Intent(Page0.this,AllService.class);
                     startActivity(tp2);
         }
         if (view==button4)

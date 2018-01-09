@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ash.smartamravati.activity.Nocprevious">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+
+                android:text="Noc for fire"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/tittle"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="40dp"
+                android:hint="Tittle"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/firstName"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_alignStart="@+id/tittle"
+                android:layout_below="@+id/tittle"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:hint="Applicant Name"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="140dp"
+                android:text="Gender"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+            />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="180dp"
+                android:text="Male"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="220dp"
+                android:text="Female"
+                android:textSize="20sp" />
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_alignStart="@+id/tittle"
+                android:layout_below="@+id/tittle"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="160dp"
+                android:hint="Building name"
+                android:textSize="25sp" />
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_alignStart="@+id/tittle"
+                android:layout_below="@+id/tittle"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="210dp"
+                android:hint="Road name"
+                android:textSize="25sp" />
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_alignStart="@+id/tittle"
+                android:layout_below="@+id/tittle"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="260dp"
+                android:hint="Area name"
+                android:textSize="25sp" />
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_alignStart="@+id/tittle"
+                android:layout_below="@+id/tittle"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="310dp"
+                android:hint="Block name"
+                android:textSize="25sp" />
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_alignStart="@+id/tittle"
+                android:layout_below="@+id/tittle"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="360dp"
+                android:hint="Housing complex name"
+                android:textSize="25sp" />
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_alignStart="@+id/tittle"
+                android:layout_below="@+id/tittle"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="410dp"
+                android:hint="Wing"
+                android:textSize="25sp" />
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_alignStart="@+id/tittle"
+                android:layout_below="@+id/tittle"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="460dp"
+                android:hint="Floor No"
+                android:textSize="25sp" />
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_alignStart="@+id/tittle"
+                android:layout_below="@+id/tittle"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="510dp"
+                android:hint="Village/town/city"
+                android:textSize="25sp" />
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_alignStart="@+id/tittle"
+                android:layout_below="@+id/tittle"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="560dp"
+                android:hint="Pincode"
+                android:textSize="25sp" />
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_alignStart="@+id/tittle"
+                android:layout_below="@+id/tittle"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="610dp"
+                android:hint="Phone no 1"
+                android:textSize="25sp" />
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_alignStart="@+id/tittle"
+                android:layout_below="@+id/tittle"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="660dp"
+                android:hint="Phone no 1"
+                android:textSize="25sp" />
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_alignStart="@+id/tittle"
+                android:layout_below="@+id/tittle"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="710dp"
+                android:hint="Contact person name"
+                android:textSize="25sp" />
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_alignStart="@+id/tittle"
+                android:layout_below="@+id/tittle"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="760dp"
+                android:hint="Mobile No"
+                android:textSize="25sp" />
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_alignStart="@+id/tittle"
+                android:layout_below="@+id/tittle"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="810dp"
+                android:hint="Email"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="950dp"
+                android:background="@color/bg_main"
+                android:hint="Next"
+                android:textSize="25sp" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+
+
