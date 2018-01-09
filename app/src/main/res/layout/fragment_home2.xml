@@ -1,0 +1,361 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ash.smartamravati.activity.HomeFragment">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.example.ash.smartamravati.activity.NavigationDrawer"
+        tools:showIn="@layout/app_bar_navigation_drawer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="65dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Information"
+                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="10dp">
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="75dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:autofillHints="Amravati City Information"
+                    android:src="@drawable/ic_office" />
+
+
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="75dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:autofillHints="Administration Information"
+                    android:src="@drawable/ic_administration" />
+
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="75dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:autofillHints="Elected Officials"
+                    android:src="@drawable/ic_user" />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Amravati City"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="true"
+                    android:textSize="12dp"
+                    android:layout_marginLeft="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Administration"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Elected Officials"
+                    android:textAlignment="textEnd"
+                    android:textAllCaps="true"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Online Services"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="15dp">
+
+                <ImageButton
+                    android:id="@+id/imageButton4"
+                    android:layout_width="75dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:autofillHints="Online Complaints"
+                    android:src="@drawable/ic_complaint" />
+
+                <ImageButton
+                    android:id="@+id/imageButton5"
+                    android:layout_width="75dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:autofillHints="online Services"
+                    android:src="@drawable/ic_services" />
+
+                <ImageButton
+                    android:id="@+id/imageButton6"
+                    android:layout_width="75dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:autofillHints="Important Contacts"
+                    android:src="@drawable/ic_contact" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Complaints"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="true"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Services"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Important\nContacts"
+                    android:layout_marginRight="25dp"
+                    android:textAlignment="textEnd"
+                    android:textAllCaps="true"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Other"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp">
+
+                <ImageButton
+                    android:id="@+id/imageButton7"
+                    android:layout_width="75dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:autofillHints="FAQ"
+                    android:src="@drawable/ic_faq" />
+
+                <ImageButton
+                    android:id="@+id/imageButton8"
+                    android:layout_width="75dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:autofillHints="About Us"
+                    android:src="@drawable/ic_add" />
+
+                <ImageButton
+                    android:id="@+id/imageButton9"
+                    android:layout_width="75dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:autofillHints="Feedback"
+                    android:src="@drawable/ic_pencil" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="FAQ"
+                    android:layout_marginLeft="50dp"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="true"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="About Us"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Feedback"
+                    android:textAlignment="textEnd"
+                    android:textAllCaps="true"
+                    android:layout_marginRight="25dp"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Social"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="10dp">
+
+                <ImageButton
+                    android:id="@+id/imageButton10"
+                    android:layout_width="75dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:autofillHints="Facebook"
+                    android:src="@drawable/ic_facebook" />
+
+                <ImageButton
+                    android:id="@+id/imageButton11"
+                    android:layout_width="75dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:autofillHints="Twitter"
+                    android:src="@drawable/ic_twitter" />
+
+                <ImageButton
+                    android:id="@+id/imageButton12"
+                    android:layout_width="75dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:autofillHints="Youtube"
+                    android:src="@drawable/ic_youtube" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="Facebook"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="true"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Twitter"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:text="Youtube"
+                    android:textAlignment="textEnd"
+                    android:textAllCaps="true"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

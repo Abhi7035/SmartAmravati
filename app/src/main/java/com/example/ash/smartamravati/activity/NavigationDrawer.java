@@ -15,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageButton;
 
 import com.example.ash.smartamravati.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,17 +24,25 @@ import com.google.firebase.auth.FirebaseUser;
 public class NavigationDrawer extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private FirebaseAuth firebaseAuth;
-    @Override
+    NavigationView navigationView =null;
+    Toolbar toolbar = null;
+
+        @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         firebaseAuth = FirebaseAuth.getInstance();
         FirebaseUser user = firebaseAuth.getCurrentUser();
-        setm();
-    }
-
-    public void setm(){
         setContentView(R.layout.activity_navigation_drawer);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        HomeFragment fragment = new HomeFragment();
+        FragmentTransaction fragmentTransaction= getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_Home, fragment);
+            fragmentTransaction.commit();
+
+
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+
         setSupportActionBar(toolbar);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -41,7 +50,7 @@ public class NavigationDrawer extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
     @Override
@@ -69,9 +78,6 @@ public class NavigationDrawer extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
         if (id == R.id.action_logout) {
             firebaseAuth.signOut();
             finish();
@@ -90,31 +96,72 @@ public class NavigationDrawer extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
 
-        Fragment fragment = null;
 
         int id = item.getItemId();
 
-               if (id == R.id.nav_camera) {
+        if (id == R.id.nav_home) {
+
+                   HomeFragment fragment = new HomeFragment();
+                   FragmentTransaction fragmentTransaction= getSupportFragmentManager().beginTransaction();
+                   fragmentTransaction.replace(R.id.fragment_Home, fragment);
+                   fragmentTransaction.commit();
+        }
+        else if (id == R.id.nav_notification) {
+
+            NotificationFragment fragment = new NotificationFragment();
+            FragmentTransaction fragmentTransaction= getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_Home, fragment);
+            fragmentTransaction.commit();
+
         }
         else if (id == R.id.nav_gallery) {
-            fragment = new Notification();
-        }
-        else if (id == R.id.nav_slideshow) {
+
+            GalleryFragment fragment = new GalleryFragment();
+            FragmentTransaction fragmentTransaction= getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_Home, fragment);
+            fragmentTransaction.commit();
 
         }
-        else if (id == R.id.nav_manage) {
+        else if (id == R.id.nav_services) {
+
+            OnlineAppServicesStatusFragment fragment = new OnlineAppServicesStatusFragment();
+            FragmentTransaction fragmentTransaction= getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_Home, fragment);
+            fragmentTransaction.commit();
 
         }
-        else if (id == R.id.nav_share) {
+        else if (id == R.id.list_Services) {
+
+            ServicesFragment fragment = new ServicesFragment();
+            FragmentTransaction fragmentTransaction= getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_Home, fragment);
+            fragmentTransaction.commit();
 
         }
-        else if (id == R.id.nav_send) {
+        else if (id == R.id.action_settings) {
 
-        }if (fragment != null) {
-            setm();
+            SettingFragment fragment = new SettingFragment();
+            FragmentTransaction fragmentTransaction= getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_Home, fragment);
+            fragmentTransaction.commit();
 
         }
+        else if (id == R.id.nav_call) {
 
+            CallCenterFragment fragment = new CallCenterFragment();
+            FragmentTransaction fragmentTransaction= getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_Home, fragment);
+            fragmentTransaction.commit();
+
+        }
+        else if (id == R.id.nav_mail) {
+
+            AdminContactFragment fragment = new AdminContactFragment();
+            FragmentTransaction fragmentTransaction= getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_Home, fragment);
+            fragmentTransaction.commit();
+
+        }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
