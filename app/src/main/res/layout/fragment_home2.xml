@@ -313,8 +313,8 @@
                     android:layout_width="75dp"
                     android:layout_height="100dp"
                     android:layout_weight="1"
-                    android:autofillHints="Youtube"
-                    android:src="@drawable/ic_youtube" />
+                    android:autofillHints="Smart Amravati"
+                    android:src="@drawable/smartamravati" />
             </LinearLayout>
 
             <RelativeLayout

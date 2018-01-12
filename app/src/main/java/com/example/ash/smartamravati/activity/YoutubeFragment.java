@@ -28,7 +28,7 @@ public class YoutubeFragment extends Fragment {
         v = inflater.inflate(R.layout.fragment_youtube, container, false);
         mWebView = (WebView) v.findViewById(R.id.webView);
         mWebView.getSettings().setJavaScriptEnabled(true);
-        mWebView.loadUrl("http://m.youtube.com/");
+        mWebView.loadUrl("https://smartcityamravati.com/index");
 
                 return v;
     }

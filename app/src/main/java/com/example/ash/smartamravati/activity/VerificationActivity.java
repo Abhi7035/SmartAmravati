@@ -72,7 +72,8 @@ public class VerificationActivity extends AppCompatActivity {
                                 if (user.isEmailVerified()== true){
                                     finish();
                                     Toast.makeText(VerificationActivity.this, " Verification Successful for => :" + FirebaseAuth.getInstance().getCurrentUser().getEmail(), Toast.LENGTH_LONG).show();
-                                    startActivity(new Intent(getApplicationContext(), Page4.class));
+
+                                    startActivity(new Intent(getApplicationContext(), NavigationDrawer.class));
                                 }else {
                                     Toast.makeText(VerificationActivity.this, "Please verify...", Toast.LENGTH_LONG).show();
                                 }

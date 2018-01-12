@@ -47,7 +47,7 @@ public TextView fgp;
         fgp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent ty=new Intent(Page3.this,NavigationDrawer.class);
+                Intent ty=new Intent(Page3.this,Page5.class);
                 startActivity(ty);
             }
         });
@@ -60,10 +60,9 @@ public TextView fgp;
         setContentView(R.layout.activity_page3);
         firebaseAuth = FirebaseAuth.getInstance();
         if(firebaseAuth.getCurrentUser() != null){
-            //close this activity
+            firebaseAuth.signOut();
             finish();
-            //opening profile activity
-            startActivity(new Intent(getApplicationContext(), NavigationDrawer.class));
+            startActivity(new Intent(getApplicationContext(), Page3.class));
 
         }
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
@@ -107,12 +106,14 @@ public TextView fgp;
                     //start the profile activity
                     finish();
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                    if (user.isEmailVerified()== true){
-                        startActivity(new Intent(getApplicationContext(), NavigationDrawer.class));
+                    if (user.isEmailVerified() ==false){
+
+
+                        startActivity(new Intent(getApplicationContext(), Page4.class));
                     }
 
                     else{
-                        startActivity(new Intent(getApplicationContext(), VerificationActivity.class));
+                        startActivity(new Intent(getApplicationContext(), NavigationDrawer.class));
 
 
                     }

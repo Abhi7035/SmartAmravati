@@ -89,8 +89,10 @@ public class Page6 extends AppCompatActivity implements View.OnClickListener {
                         //checking if success
                         if(task.isSuccessful()){
                             //display some message here
-                            Toast.makeText(Page6.this,"Successfully registered",Toast.LENGTH_LONG).show();
-                            mAuth.signOut();
+                            Toast.makeText(Page6.this,"Successfully registered...",Toast.LENGTH_LONG).show();
+                            Toast.makeText(Page6.this,"Proceed to profile Section...",Toast.LENGTH_LONG).show();
+                            startActivity(new Intent(getApplicationContext(), Page4.class));
+
 
                         }else{
                             //display some message here

@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import com.example.ash.smartamravati.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Page0 extends AppCompatActivity implements View.OnClickListener {
     public Button button2;
@@ -27,8 +29,8 @@ public class Page0 extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         if (view == button2) {
-            Intent toy = new Intent(Page0.this, Page3.class);
-            startActivity(toy);
+
+            startActivity(new Intent(getApplicationContext(), Page3.class));
 
         }
         if (view==button3)
