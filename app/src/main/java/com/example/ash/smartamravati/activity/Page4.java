@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
@@ -42,7 +43,8 @@ public class Page4 extends AppCompatActivity {
 
     boolean checked = false;
     private static final int REQUEST_CAMERA = 3;
-    private static final int SELECT_FILE = 2;
+    private static final int GALLERY_REQUEST = 1;
+    private static final int SELECT_FILE = 1;
 
     EditText tittle, name, email, mobileNo, address, pincode, DoBirth;
     Button btnSave;
@@ -178,8 +180,6 @@ public class Page4 extends AppCompatActivity {
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
                         final Uri imageUrl = taskSnapshot.getDownloadUrl();
-                        mUserDatabse.child("Profile pic url").setValue(imageUrl.toString());
-                        mUserDatabse.child("user ID").setValue(mAuth.getCurrentUser().getUid());
                         mUserDatabse.child("user Tittle").setValue(usertittle);
                         mUserDatabse.child("user Name").setValue(username);
                         mUserDatabse.child("user Address").setValue(useraddress);
@@ -187,6 +187,8 @@ public class Page4 extends AppCompatActivity {
                         mUserDatabse.child("user Mobile No").setValue(usermobileno);
                         mUserDatabse.child("user Pincode").setValue(userpincode);
                         mUserDatabse.child("user Date of Birth").setValue(userdobirth);
+                        mUserDatabse.child("Profile pic url").setValue(imageUrl.toString());
+                        mUserDatabse.child("user ID").setValue(mAuth.getCurrentUser().getUid());
 
                         mProgress.dismiss();
                         if (checked == true) {
@@ -223,7 +225,7 @@ public class Page4 extends AppCompatActivity {
 
         //DISPLAY DIALOG TO CHOOSE CAMERA OR GALLERY
 
-        final CharSequence[] items = { "Choose from Library",
+        final CharSequence[] items = {"Take Photo", "Choose from Library",
                 "Cancel"};
         AlertDialog.Builder builder = new AlertDialog.Builder(Page4.this);
         builder.setTitle("Add Photo!");
@@ -232,7 +234,9 @@ public class Page4 extends AppCompatActivity {
         builder.setItems(items, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int item) {
-                if (items[item].equals("Choose from Library")) {
+                if (items[item].equals("Take Photo")) {
+                    cameraIntent();
+                } else  if (items[item].equals("Choose from Library")) {
                     galleryIntent();
                 } else if (items[item].equals("Cancel")) {
                     dialogInterface.dismiss();
@@ -243,6 +247,14 @@ public class Page4 extends AppCompatActivity {
 
     }
 
+    private void cameraIntent() {
+
+        //CHOOSE CAMERA
+
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        startActivityForResult(intent, REQUEST_CAMERA);
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+    }
 
     private void galleryIntent() {
 
@@ -261,14 +273,43 @@ public class Page4 extends AppCompatActivity {
 
 
         //SAVE URI FROM GALLERY
-        if(requestCode == SELECT_FILE && resultCode == RESULT_OK && data != null && data.getData()!=null)
+        if (requestCode == GALLERY_REQUEST && resultCode == RESULT_OK && data != null && data.getData()!=null)
         {
-            imageHoldUri = data.getData();
+           // imageHoldUri = data.getData();
+         //   userImageProfileView.setImageURI(imageHoldUri);
+            Uri imageUri = data.getData();
 
-            userImageProfileView.setImageURI(imageHoldUri);
+            CropImage.activity(imageUri)
+                    .setGuidelines(CropImageView.Guidelines.ON)
+                    .setAspectRatio(1,1)
+
+                    .setBorderLineColor(Color.RED)
+                    .start(this);
+
+        }else if ( requestCode == REQUEST_CAMERA && resultCode == RESULT_OK ){
+            //SAVE URI FROM CAMERA
+
+            Uri imageUri = data.getData();
+
+
+            CropImage.activity(imageUri)
+                    .setGuidelines(CropImageView.Guidelines.ON)
+                    .setAspectRatio(4,3)
+                    .setBorderLineColor(Color.RED)
+                    .start(this);
 
         }
 
+        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+            CropImage.ActivityResult result = CropImage.getActivityResult(data);
+            if (resultCode == RESULT_OK) {
+                imageHoldUri = result.getUri();
+
+                userImageProfileView.setImageURI(imageHoldUri);
+            } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
+                Exception error = result.getError();
+            }
+        }
 
         }
 

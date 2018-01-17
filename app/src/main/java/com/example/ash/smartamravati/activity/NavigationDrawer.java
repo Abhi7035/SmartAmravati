@@ -16,14 +16,35 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.ash.smartamravati.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 public class NavigationDrawer extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    private FirebaseAuth firebaseAuth;
+
+
+    FirebaseAuth firebaseAuth;
+
+    StorageReference mStorageRef;
+
+    private  String name;
+    private  String email;
+    private  String userID;
+    private  String imageURL;
     NavigationView navigationView =null;
     Toolbar toolbar = null;
 
@@ -31,17 +52,21 @@ public class NavigationDrawer extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         firebaseAuth = FirebaseAuth.getInstance();
-        FirebaseUser user = firebaseAuth.getCurrentUser();
+        final FirebaseUser user = firebaseAuth.getCurrentUser();
+        userID = user.getUid();
+
+        mStorageRef = FirebaseStorage.getInstance().getReference();
+
         setContentView(R.layout.activity_navigation_drawer);
 
         HomeFragment fragment = new HomeFragment();
         FragmentTransaction fragmentTransaction= getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fragment_Home, fragment);
-            fragmentTransaction.commit();
-
+        fragmentTransaction.commit();
 
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+
 
         setSupportActionBar(toolbar);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -51,7 +76,64 @@ public class NavigationDrawer extends AppCompatActivity
         toggle.syncState();
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+
+            View hView =  navigationView.getHeaderView(0);
+            final TextView username = (TextView)hView.findViewById(R.id.textView);
+            final TextView userEmail = (TextView)hView.findViewById(R.id.textView1);
+            final ImageView userProfileImage = (ImageView)hView.findViewById(R.id.imageView);
+
+
+            DatabaseReference mRootRefer = FirebaseDatabase.getInstance().getReference();
+            DatabaseReference mChildrefer = mRootRefer.child("Users").child(userID).child("user Name");
+            DatabaseReference mChildrefer1 = mRootRefer.child("Users").child(userID).child("user Email");
+            DatabaseReference mChildrefer2 = mRootRefer.child("Users").child(userID).child("Profile pic url");
+
+            mChildrefer.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    name = dataSnapshot.getValue().toString();
+                    username.setText(name);
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+
+            mChildrefer1.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    email = dataSnapshot.getValue().toString();
+                    userEmail.setText(email);
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+
+
+            mChildrefer2.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    imageURL= dataSnapshot.getValue().toString();
+                    Glide.with(getApplicationContext()).load(imageURL).bitmapTransform(new CircleTransform(getApplicationContext())).into(userProfileImage);
+
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+
+
+
+
+
+            navigationView.setNavigationItemSelectedListener(this);
     }
     @Override
     public void onBackPressed() {
@@ -99,14 +181,7 @@ public class NavigationDrawer extends AppCompatActivity
 
         int id = item.getItemId();
 
-        if (id == R.id.nav_home) {
-
-                   HomeFragment fragment = new HomeFragment();
-                   FragmentTransaction fragmentTransaction= getSupportFragmentManager().beginTransaction();
-                   fragmentTransaction.replace(R.id.fragment_Home, fragment);
-                   fragmentTransaction.commit();
-        }
-        else if (id == R.id.nav_notification) {
+        if (id == R.id.nav_notification) {
 
             NotificationFragment fragment = new NotificationFragment();
             FragmentTransaction fragmentTransaction= getSupportFragmentManager().beginTransaction();
@@ -161,6 +236,12 @@ public class NavigationDrawer extends AppCompatActivity
             fragmentTransaction.replace(R.id.fragment_Home, fragment);
             fragmentTransaction.commit();
 
+        }else {
+
+            HomeFragment fragment = new HomeFragment();
+            FragmentTransaction fragmentTransaction= getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_Home, fragment);
+            fragmentTransaction.commit();
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

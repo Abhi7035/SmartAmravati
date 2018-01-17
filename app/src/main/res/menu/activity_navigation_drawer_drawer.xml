@@ -22,7 +22,6 @@
             android:title="List of Services" />
 
 
-
             <item
                 android:id="@+id/nav_services"
                 android:icon="@drawable/ic_swap_vert_black_24dp"
@@ -37,9 +36,9 @@
                 android:id="@+id/nav_call"
                 android:icon="@drawable/ic_call_black_24dp"
                 android:title="Call Center" />
-            <item
-                android:id="@+id/nav_mail"
-                android:icon="@drawable/ic_contact_mail_black_24dp"
-                android:title="Admin Contact" />
+        <item
+            android:id="@+id/nav_mail"
+            android:icon="@drawable/ic_contact_mail_black_24dp"
+            android:title="Contact Us" />
     </group>
 </menu>
