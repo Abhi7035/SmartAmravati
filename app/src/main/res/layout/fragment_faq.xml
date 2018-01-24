@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ash.smartamravati.activity.FAQFragment">
+    tools:context="com.example.ash.smartamravati.activity.user.dashboard.menu.FAQFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

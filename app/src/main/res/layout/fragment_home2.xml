@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ash.smartamravati.activity.HomeFragment">
+    tools:context="com.example.ash.smartamravati.activity.user.dashboard.sidemenu.HomeFragment">
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context="com.example.ash.smartamravati.activity.NavigationDrawer"
+        tools:context="com.example.ash.smartamravati.activity.user.dashboard.NavigationDrawer"
         tools:showIn="@layout/app_bar_navigation_drawer">
 
         <LinearLayout

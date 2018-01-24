@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#fff"
     android:visibility="visible"
-    tools:context="com.example.ash.smartamravati.activity.Page4">
+    tools:context="com.example.ash.smartamravati.activity.user.Profile.Page4">
 
 
     <RelativeLayout

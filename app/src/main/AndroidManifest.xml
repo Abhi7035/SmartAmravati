@@ -13,14 +13,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.Page0">
+        <activity android:name=".activity.start.Page0">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.Page2">
+        <activity android:name=".activity.start.Page2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,16 +29,16 @@
         </activity>
         <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat"/>
-        <activity android:name=".activity.Page3" />
-        <activity android:name=".activity.Page4" />
-        <activity android:name=".activity.Page5" />
-        <activity android:name=".activity.Page6" />
-        <activity android:name=".activity.VerificationActivity" />
-        <activity android:name=".activity.Department" />
-        <activity android:name=".activity.AdminLogin" />
-        <activity android:name=".activity.DepartMenu" />
+        <activity android:name=".activity.user.login.Page3" />
+        <activity android:name=".activity.user.Profile.Page4" />
+        <activity android:name=".activity.user.forgotpass.Page5" />
+        <activity android:name=".activity.user.register.Page6" />
+        <activity android:name=".activity.user.verification.VerificationActivity" />
+        <activity android:name=".activity.department.login.Department" />
+        <activity android:name=".activity.admin.login.AdminLogin" />
+        <activity android:name=".activity.department.dashboard.DepartMenu" />
         <activity
-            android:name=".activity.NavigationDrawer"
+            android:name=".activity.user.dashboard.NavigationDrawer"
             android:label="@string/title_activity_navigation_drawer"
             android:theme="@style/AppTheme.NoActionBar">
 

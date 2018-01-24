@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffed"
-    tools:context="com.example.ash.smartamravati.activity.Page5">
+    tools:context="com.example.ash.smartamravati.activity.user.forgotpass.Page5">
 
     <ImageView
         android:id="@+id/imageView3"
