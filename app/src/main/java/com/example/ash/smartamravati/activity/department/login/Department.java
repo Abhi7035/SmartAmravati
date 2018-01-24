@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import com.example.ash.smartamravati.R;
 import com.example.ash.smartamravati.activity.department.dashboard.DepartMenu;
+import com.example.ash.smartamravati.activity.department.profile.DepartProfile;
+import com.example.ash.smartamravati.activity.department.verification.DepartVerification;
 import com.example.ash.smartamravati.activity.user.login.Page3;
 import com.example.ash.smartamravati.activity.user.verification.VerificationActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -84,14 +86,14 @@ public class Department extends AppCompatActivity {
                     //start the profile activity
                     finish();
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                    if (user.isEmailVerified() == true){
+                    if (user.isEmailVerified() == false){
 
 
-                        startActivity(new Intent(getApplicationContext(), DepartMenu.class));
+                        startActivity(new Intent(getApplicationContext(), DepartProfile.class));
                     }
 
                     else{
-                        startActivity(new Intent(getApplicationContext(), VerificationActivity.class));
+                        startActivity(new Intent(getApplicationContext(), DepartVerification.class));
 
 
                     }
