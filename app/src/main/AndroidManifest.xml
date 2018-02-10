@@ -43,7 +43,10 @@
             android:label="@string/title_activity_navigation_drawer"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activity.department.profile.DepartProfile" />
-        <activity android:name=".activity.department.verification.DepartVerification"></activity>
+        <activity android:name=".activity.department.verification.DepartVerification" />
+        <activity android:name=".activity.admin.profile.AdminProfile" />
+        <activity android:name=".activity.admin.verification.AdminVerification" />
+        <activity android:name=".activity.admin.dashboard.AdminDashboard"></activity>
     </application>
 
 </manifest>

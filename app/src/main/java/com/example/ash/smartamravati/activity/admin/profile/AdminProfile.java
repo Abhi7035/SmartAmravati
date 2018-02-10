@@ -1,4 +1,4 @@
-package com.example.ash.smartamravati.activity.department.profile;
+package com.example.ash.smartamravati.activity.admin.profile;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -19,9 +19,8 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.ash.smartamravati.R;
-import com.example.ash.smartamravati.activity.department.verification.DepartVerification;
-import com.example.ash.smartamravati.activity.user.Profile.Page4;
-import com.example.ash.smartamravati.activity.user.dashboard.NavigationDrawer;
+import com.example.ash.smartamravati.activity.admin.verification.AdminVerification;
+import com.example.ash.smartamravati.activity.department.profile.DepartProfile;
 import com.example.ash.smartamravati.activity.user.verification.VerificationActivity;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -34,7 +33,8 @@ import com.google.firebase.storage.UploadTask;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
-public class DepartProfile extends AppCompatActivity {
+
+public class AdminProfile extends AppCompatActivity {
 
     boolean checked = false;
     private static final int REQUEST_CAMERA = 3;
@@ -46,12 +46,12 @@ public class DepartProfile extends AppCompatActivity {
     ImageView userImageProfileView;
     CheckBox checkBox;
 
-    FirebaseAuth mAuth;
+    FirebaseAuth Auth;
     FirebaseAuth.AuthStateListener mAuthListener;
 
 
-    DatabaseReference mUserDatabse;
-    StorageReference mStorageRef;
+    DatabaseReference UserDatabse;
+    StorageReference StorageRef;
 
     Uri imageHoldUri = null;
 
@@ -61,7 +61,7 @@ public class DepartProfile extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_depart_profile);
+        setContentView(R.layout.activity_admin_profile);
 
         userImageProfileView = (ImageView)findViewById(R.id.profileImage);
         btnSave = (Button) findViewById(R.id.btnSave);
@@ -80,11 +80,11 @@ public class DepartProfile extends AppCompatActivity {
             public void onClick(View view) {
                 checked = ((CheckBox) view).isChecked();
                 if (checked == true){
-                    Toast.makeText(DepartProfile.this," Agreed...!! ", Toast.LENGTH_LONG).show();
+                    Toast.makeText(AdminProfile.this," Agreed...!! ", Toast.LENGTH_LONG).show();
                 }
             }
         });
-        mAuth = FirebaseAuth.getInstance();
+        Auth = FirebaseAuth.getInstance();
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -96,7 +96,7 @@ public class DepartProfile extends AppCompatActivity {
                 if (user != null) {
 
                     finish();
-                    Intent moveToHome = new Intent(DepartProfile.this, DepartVerification.class);
+                    Intent moveToHome = new Intent(AdminProfile.this, AdminVerification.class);
                     moveToHome.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(moveToHome);
 
@@ -112,8 +112,8 @@ public class DepartProfile extends AppCompatActivity {
         mProgress = new ProgressDialog(this);
 
         //FIREBASE DATABASE INSTANCE
-        mUserDatabse = FirebaseDatabase.getInstance().getReference().child("Department").child(mAuth.getCurrentUser().getUid());
-        mStorageRef = FirebaseStorage.getInstance().getReference();
+        UserDatabse = FirebaseDatabase.getInstance().getReference().child("Admin").child(Auth.getCurrentUser().getUid());
+        StorageRef = FirebaseStorage.getInstance().getReference();
 
 
 
@@ -169,7 +169,7 @@ public class DepartProfile extends AppCompatActivity {
                 mProgress.setMessage("Please wait....");
                 mProgress.show();
 
-                StorageReference mChildStorage = mStorageRef.child("Depart_Profile").child(imageHoldUri.getLastPathSegment());
+                StorageReference mChildStorage = StorageRef.child("Admin_Profile").child(imageHoldUri.getLastPathSegment());
 
 
                 mChildStorage.putFile(imageHoldUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -177,27 +177,27 @@ public class DepartProfile extends AppCompatActivity {
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
                         final Uri imageUrl = taskSnapshot.getDownloadUrl();
-                        mUserDatabse.child("user Tittle").setValue(usertittle);
-                        mUserDatabse.child("user Name").setValue(username);
-                        mUserDatabse.child("Department").setValue(userpost);
-                        mUserDatabse.child("user Address").setValue(useraddress);
-                        mUserDatabse.child("user Email").setValue(useremail);
-                        mUserDatabse.child("user Mobile No").setValue(usermobileno);
-                        mUserDatabse.child("user Pincode").setValue(userpincode);
-                        mUserDatabse.child("user Date of Birth").setValue(userdobirth);
-                        mUserDatabse.child("Profile pic url").setValue(imageUrl.toString());
-                        mUserDatabse.child("user ID").setValue(mAuth.getCurrentUser().getUid());
+                        UserDatabse.child("user Tittle").setValue(usertittle);
+                        UserDatabse.child("user Name").setValue(username);
+                        UserDatabse.child("Department").setValue(userpost);
+                        UserDatabse.child("user Address").setValue(useraddress);
+                        UserDatabse.child("user Email").setValue(useremail);
+                        UserDatabse.child("user Mobile No").setValue(usermobileno);
+                        UserDatabse.child("user Pincode").setValue(userpincode);
+                        UserDatabse.child("user Date of Birth").setValue(userdobirth);
+                        UserDatabse.child("Profile pic url").setValue(imageUrl.toString());
+                        UserDatabse.child("user ID").setValue(Auth.getCurrentUser().getUid());
 
                         mProgress.dismiss();
                         if (checked == true) {
 
-                            Toast.makeText(DepartProfile.this, "profile created sucessfully..", Toast.LENGTH_LONG).show();
-                            Toast.makeText(DepartProfile.this, "Verify Email..", Toast.LENGTH_LONG).show();
+                            Toast.makeText(AdminProfile.this, "profile created sucessfully..", Toast.LENGTH_LONG).show();
+                            Toast.makeText(AdminProfile.this, "Verify Email..", Toast.LENGTH_LONG).show();
                             finish();
-                            startActivity(new Intent(getApplicationContext(), VerificationActivity.class));
+                            startActivity(new Intent(getApplicationContext(), AdminVerification.class));
                         }else {
 
-                            Toast.makeText(DepartProfile.this, " Click on the CheckBox ", Toast.LENGTH_LONG).show();
+                            Toast.makeText(AdminProfile.this, " Click on the CheckBox ", Toast.LENGTH_LONG).show();
                         }
 
                     }
@@ -205,13 +205,13 @@ public class DepartProfile extends AppCompatActivity {
             }else
             {
 
-                Toast.makeText(DepartProfile.this, "Please select the profile pic", Toast.LENGTH_LONG).show();
+                Toast.makeText(AdminProfile.this, "Please select the profile pic", Toast.LENGTH_LONG).show();
 
             }
         }else
         {
 
-            Toast.makeText(DepartProfile.this, "Please fill all the fields", Toast.LENGTH_LONG).show();
+            Toast.makeText(AdminProfile.this, "Please fill all the fields", Toast.LENGTH_LONG).show();
 
         }
 
@@ -225,7 +225,7 @@ public class DepartProfile extends AppCompatActivity {
 
         final CharSequence[] items = {"Take Photo", "Choose from Library",
                 "Cancel"};
-        AlertDialog.Builder builder = new AlertDialog.Builder(DepartProfile.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(AdminProfile.this);
         builder.setTitle("Add Photo!");
 
         //SET ITEMS AND THERE LISTENERS
@@ -310,7 +310,5 @@ public class DepartProfile extends AppCompatActivity {
         }
 
     }
-
-
 
 }

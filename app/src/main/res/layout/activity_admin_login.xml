@@ -79,6 +79,21 @@
         android:textColor="#fff"
         android:textColorHint="#1be2d4" />
 
+        <EditText
+            android:id="@+id/editTextCode"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:drawableLeft="@drawable/ic_lock_black_24dp"
+            android:drawableStart="@drawable/ic_lock_black_24dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="#fff"
+            android:textColorHint="#1be2d4" />
+
     <Button
         android:id="@+id/buttonSignIn"
         android:layout_width="250dp"
