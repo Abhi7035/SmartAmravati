@@ -74,6 +74,8 @@ public class ComplaintsFragment extends Fragment {
             public void onClick(View view) {
 
 
+                Intent intent = new Intent(getActivity(), MyComplaints.class);
+                startActivity(intent);
 
             }
         });
@@ -82,6 +84,8 @@ public class ComplaintsFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
+                Intent intent = new Intent(getActivity(), MyComplaints.class);
+                startActivity(intent);
 
             }
         });
