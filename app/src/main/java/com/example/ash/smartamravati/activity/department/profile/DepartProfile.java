@@ -194,7 +194,7 @@ public class DepartProfile extends AppCompatActivity {
                             Toast.makeText(DepartProfile.this, "profile created sucessfully..", Toast.LENGTH_LONG).show();
                             Toast.makeText(DepartProfile.this, "Verify Email..", Toast.LENGTH_LONG).show();
                             finish();
-                            startActivity(new Intent(getApplicationContext(), VerificationActivity.class));
+                            startActivity(new Intent(getApplicationContext(), DepartVerification.class));
                         }else {
 
                             Toast.makeText(DepartProfile.this, " Click on the CheckBox ", Toast.LENGTH_LONG).show();

@@ -46,7 +46,9 @@
         <activity android:name=".activity.department.verification.DepartVerification" />
         <activity android:name=".activity.admin.profile.AdminProfile" />
         <activity android:name=".activity.admin.verification.AdminVerification" />
-        <activity android:name=".activity.admin.dashboard.AdminDashboard"></activity>
+        <activity android:name=".activity.admin.dashboard.AdminDashboard" />
+        <activity android:name=".activity.user.dashboard.menu.NewComplaint" />
+        <activity android:name=".activity.user.dashboard.menu.MyComplaints"></activity>
     </application>
 
 </manifest>

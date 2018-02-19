@@ -108,7 +108,7 @@ public class Department extends AppCompatActivity {
 
                             startActivity(new Intent(getApplicationContext(), DepartMenu.class));
                         } else {
-                            startActivity(new Intent(getApplicationContext(), DepartVerification.class));
+                            startActivity(new Intent(getApplicationContext(), DepartProfile.class));
 
 
                         }

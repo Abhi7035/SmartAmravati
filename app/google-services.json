@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "399885432202",
-    "firebase_url": "https://smartamravati-3451a.firebaseio.com",
-    "project_id": "smartamravati-3451a",
-    "storage_bucket": "smartamravati-3451a.appspot.com"
+    "project_number": "224669954966",
+    "firebase_url": "https://smartamc-14986.firebaseio.com",
+    "project_id": "smartamc-14986",
+    "storage_bucket": "smartamc-14986.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:399885432202:android:49d77f8b47190535",
+        "mobilesdk_app_id": "1:224669954966:android:49d77f8b47190535",
         "android_client_info": {
           "package_name": "com.example.ash.smartamravati"
         }
       },
       "oauth_client": [
         {
-          "client_id": "399885432202-lnlfgnfd7bnbockto0isnqdoc5ollpd5.apps.googleusercontent.com",
+          "client_id": "224669954966-67cau7v69bl9jn5mpknqtrdltg6i30h1.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.ash.smartamravati",
@@ -23,13 +23,13 @@
           }
         },
         {
-          "client_id": "399885432202-kk9ol2vjl3rmrrs71amrra3is2gieq71.apps.googleusercontent.com",
+          "client_id": "224669954966-6r66oiau05dnio4ar2kgsg9rib4oibld.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyClM5qsVLx0xZGa764HasKl1AZXDWyWc0g"
+          "current_key": "AIzaSyBaSmyequoqSa-_UVvMBK7wEPTUvko2bi8"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "399885432202-kk9ol2vjl3rmrrs71amrra3is2gieq71.apps.googleusercontent.com",
+              "client_id": "224669954966-6r66oiau05dnio4ar2kgsg9rib4oibld.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

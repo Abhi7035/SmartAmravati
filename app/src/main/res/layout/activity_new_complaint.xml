@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ash.smartamravati.activity.user.dashboard.menu.NewComplaint">
+
+    <ScrollView android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30dp"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="#fff"
+                android:text="Complaint Form"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="35dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView1"
+                android:layout_marginTop="12dp"
+                android:inputType="text|textPersonName"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="( fill out the details to file a complaint )"
+                android:textAlignment="center"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/textView3"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="17dp"
+                android:hint="subject"
+                android:inputType="textCapCharacters"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:textAlignment="center"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/textView4"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView3"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="13dp"
+                android:hint="Name"
+                android:inputType="textCapCharacters"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:textAlignment="center"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/textView5"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView4"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="13dp"
+                android:hint="Mobile No."
+                android:inputType="phone"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:textAlignment="center"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/textView6"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView5"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="13dp"
+                android:hint="Enter Complaint Details"
+                android:inputType="textMultiLine"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:textAlignment="center"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView6"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:inputType="text"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="( add a Photo/Image )"
+                android:textAlignment="center"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/textView7"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="21dp"
+                android:background="#f87"
+                android:hint="Image"
+
+                android:paddingTop="10dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_if_camera_299066" />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/imageView"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="#e2351b"
+                android:gravity="center"
+                android:paddingTop="0dp"
+                android:text="Save"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btnSave"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="#e2351b"
+                android:gravity="center"
+                android:paddingTop="0dp"
+                android:text="Cancel"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

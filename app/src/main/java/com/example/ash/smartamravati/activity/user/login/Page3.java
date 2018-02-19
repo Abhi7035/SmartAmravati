@@ -17,6 +17,7 @@ import com.example.ash.smartamravati.activity.user.Profile.Page4;
 import com.example.ash.smartamravati.activity.user.forgotpass.Page5;
 import com.example.ash.smartamravati.activity.user.register.Page6;
 import com.example.ash.smartamravati.activity.user.dashboard.NavigationDrawer;
+import com.example.ash.smartamravati.activity.user.verification.VerificationActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -64,9 +65,9 @@ public TextView fgp;
         setContentView(R.layout.activity_page3);
         firebaseAuth = FirebaseAuth.getInstance();
         if(firebaseAuth.getCurrentUser() != null){
-            firebaseAuth.signOut();
+
             finish();
-            startActivity(new Intent(getApplicationContext(), Page3.class));
+            startActivity(new Intent(getApplicationContext(), NavigationDrawer.class));
 
         }
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);

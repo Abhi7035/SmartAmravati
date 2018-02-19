@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.ash.smartamravati.R;
+import com.example.ash.smartamravati.activity.admin.dashboard.AdminDashboard;
 import com.example.ash.smartamravati.activity.admin.profile.AdminProfile;
 import com.example.ash.smartamravati.activity.admin.verification.AdminVerification;
 import com.example.ash.smartamravati.activity.department.login.Department;
@@ -99,11 +100,11 @@ public class AdminLogin extends AppCompatActivity {
                     if (user.isEmailVerified() == true){
 
 
-                        startActivity(new Intent(getApplicationContext(), AdminProfile.class));
+                        startActivity(new Intent(getApplicationContext(), AdminDashboard.class));
                     }
 
                     else{
-                        startActivity(new Intent(getApplicationContext(), AdminVerification.class));
+                        startActivity(new Intent(getApplicationContext(), AdminProfile.class));
 
 
                     }
