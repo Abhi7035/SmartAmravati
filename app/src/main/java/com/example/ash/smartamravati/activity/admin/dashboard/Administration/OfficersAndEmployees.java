@@ -50,7 +50,7 @@ public class OfficersAndEmployees extends AppCompatActivity implements View.OnCl
         mStorageReference = FirebaseStorage.getInstance().getReference();
         mDatabaseReference = FirebaseDatabase.getInstance().getReference().child("Officers and Employees List");
 
-        textViewStatus = (TextView) findViewById(R.id.textViewStatus);
+
         editTextFilename = (EditText) findViewById(R.id.editTextFileName);
         progressBar = (ProgressBar) findViewById(R.id.progressbar);
 

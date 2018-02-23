@@ -52,12 +52,12 @@ public class ZonalOffices extends AppCompatActivity implements View.OnClickListe
         mStorageReference = FirebaseStorage.getInstance().getReference();
         mDatabaseReference = FirebaseDatabase.getInstance().getReference().child("Zonal Offices List");
 
-        textViewStatus = (TextView) findViewById(R.id.textViewStatus);
+
         editTextFilename = (EditText) findViewById(R.id.editTextFileName);
         progressBar = (ProgressBar) findViewById(R.id.progressbar);
 
         findViewById(R.id.buttonUploadFile).setOnClickListener(this);
-        
+
 
     }
 
