@@ -48,7 +48,31 @@
         <activity android:name=".activity.admin.verification.AdminVerification" />
         <activity android:name=".activity.admin.dashboard.AdminDashboard" />
         <activity android:name=".activity.user.dashboard.menu.NewComplaint" />
-        <activity android:name=".activity.user.dashboard.menu.MyComplaints"></activity>
+        <activity android:name=".activity.user.dashboard.menu.MyComplaints" />
+        <activity android:name=".activity.admin.dashboard.ElectedOfficials.DashAdminElectedOfficials" />
+        <activity android:name=".activity.admin.dashboard.ElectedOfficials.MayorProfile" />
+        <activity android:name=".activity.admin.dashboard.ElectedOfficials.DeputyMayorProfile" />
+        <activity android:name=".activity.admin.dashboard.ElectedOfficials.StandingChairmanProfile" />
+        <activity android:name=".activity.admin.dashboard.ElectedOfficials.CityImproveChairmanProfile" />
+        <activity android:name=".activity.admin.dashboard.ElectedOfficials.LawChairmanProfile" />
+        <activity android:name=".activity.admin.dashboard.ElectedOfficials.WomanAndChildChairmanProfile" />
+        <activity android:name=".activity.user.dashboard.ElectedOfficials.Mayor" />
+        <activity android:name=".activity.user.dashboard.ElectedOfficials.DeputyMayor" />
+        <activity android:name=".activity.user.dashboard.ElectedOfficials.StandingChairman" />
+        <activity android:name=".activity.user.dashboard.ElectedOfficials.CityImprovementChairman" />
+        <activity android:name=".activity.user.dashboard.ElectedOfficials.LawChairman" />
+        <activity android:name=".activity.user.dashboard.ElectedOfficials.WomanAndChildChairman" />
+        <activity android:name=".activity.user.dashboard.ElectedOfficials.AllCommittees" />
+        <activity android:name=".activity.user.dashboard.ElectedOfficials.AllMembers" />
+        <activity android:name=".activity.admin.dashboard.Administration.DashAdminAdministration" />
+        <activity android:name=".activity.admin.dashboard.Administration.CommissionerProfile" />
+        <activity android:name=".activity.admin.dashboard.Administration.AdditionalCommissionerProfile" />
+        <activity android:name=".activity.admin.dashboard.Administration.DeputyCommissionerProfile" />
+        <activity android:name=".activity.admin.dashboard.Administration.DepartPdf" />
+        <activity android:name=".activity.admin.dashboard.Administration.ZonalOffices" />
+        <activity android:name=".activity.admin.dashboard.Administration.OfficersAndEmployees" />
+        <activity android:name=".activity.admin.dashboard.ElectedOfficials.AllCommittesList" />
+        <activity android:name=".activity.admin.dashboard.ElectedOfficials.AllMembersList"></activity>
     </application>
 
 </manifest>

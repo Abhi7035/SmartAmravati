@@ -15,9 +15,7 @@ import android.widget.TextView;
 import com.example.ash.smartamravati.R;
 import com.example.ash.smartamravati.activity.user.dashboard.sidemenu.GalleryFragment;
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class ComplaintsFragment extends Fragment {
 
     public ImageView imageView1;
@@ -54,6 +52,7 @@ public class ComplaintsFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
+
                 Intent intent = new Intent(getActivity(), NewComplaint.class);
                 startActivity(intent);
 
@@ -63,6 +62,7 @@ public class ComplaintsFragment extends Fragment {
         text1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
 
                 Intent intent = new Intent(getActivity(), NewComplaint.class);
                 startActivity(intent);
@@ -74,6 +74,7 @@ public class ComplaintsFragment extends Fragment {
             public void onClick(View view) {
 
 
+
                 Intent intent = new Intent(getActivity(), MyComplaints.class);
                 startActivity(intent);
 
@@ -83,6 +84,7 @@ public class ComplaintsFragment extends Fragment {
         text2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
 
                 Intent intent = new Intent(getActivity(), MyComplaints.class);
                 startActivity(intent);

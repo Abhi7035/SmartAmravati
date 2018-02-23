@@ -1,14 +1,13 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ash.smartamravati.activity.user.dashboard.menu.ElectedOfficialsFragment">
+    tools:context="com.example.ash.smartamravati.activity.admin.dashboard.Administration.DashAdminAdministration">
 
-
-
-        <LinearLayout
+    <LinearLayout
         android:layout_width="match_parent"
-            android:layout_marginTop="60dp"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
@@ -19,7 +18,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
             android:fontFamily="serif"
-            android:text="Elected Officials"
+            android:text="Administration"
             android:textAlignment="center"
             android:textColor="#e2351b"
             android:textSize="30sp"
@@ -32,7 +31,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
             android:fontFamily="serif"
-            android:text="Profiles"
+            android:text="Profile Setup"
             android:textAlignment="center"
             android:textColor="@color/common_google_signin_btn_text_dark_focused"
             android:textSize="18sp" />
@@ -40,12 +39,11 @@
 
     </LinearLayout>
 
-        <LinearLayout
-        android:orientation="vertical"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="140dp">
-
+        android:layout_marginTop="80dp"
+        android:orientation="vertical">
 
 
         <LinearLayout
@@ -64,17 +62,18 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:clipToPadding="false"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
                         <android.support.v7.widget.CardView
                             android:id="@+id/card1"
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:layout_margin="10dp">
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -85,14 +84,14 @@
                                     android:id="@+id/image1"
                                     android:layout_width="64dp"
                                     android:layout_height="64dp"
-                                    android:background="@drawable/ic_mayorc" />
+                                    app:srcCompat="@drawable/ic_commitioner" />
 
                                 <TextView
                                     android:id="@+id/text1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
-                                    android:text="Mayor"
+                                    android:text="Commissioner"
                                     android:textAlignment="center"
                                     android:textSize="18sp"
                                     android:textStyle="bold" />
@@ -100,11 +99,13 @@
                             </LinearLayout>
 
                         </android.support.v7.widget.CardView>
+
                         <android.support.v7.widget.CardView
                             android:id="@+id/card2"
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:layout_margin="10dp">
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -115,17 +116,16 @@
                                     android:id="@+id/image2"
                                     android:layout_width="64dp"
                                     android:layout_height="64dp"
-                                    android:background="@drawable/ic_dmayor"
-                                    />
+                                    app:srcCompat="@drawable/ic_add_commi" />
 
                                 <TextView
                                     android:id="@+id/text2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
-                                    android:text="Deputy Mayor"
+                                    android:text="Additional \n Commissioner"
                                     android:textAlignment="center"
-                                    android:textSize="18sp"
+                                    android:textSize="14sp"
                                     android:textStyle="bold" />
 
                             </LinearLayout>
@@ -133,19 +133,21 @@
                         </android.support.v7.widget.CardView>
 
                     </LinearLayout>
+
                     <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center"
-                        android:clipToPadding="false"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:clipToPadding="false"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
                         <android.support.v7.widget.CardView
                             android:id="@+id/card3"
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:layout_margin="10dp">
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -156,14 +158,14 @@
                                     android:id="@+id/image3"
                                     android:layout_width="64dp"
                                     android:layout_height="64dp"
-                                    android:src="@drawable/ic_chairman" />
+                                    android:src="@drawable/ic_man" />
 
                                 <TextView
                                     android:id="@+id/text3"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
-                                    android:text="Standing Committee Chairman"
+                                    android:text="Deputy \n Commissioner"
                                     android:textAlignment="center"
                                     android:textSize="14sp"
                                     android:textStyle="bold" />
@@ -171,11 +173,13 @@
                             </LinearLayout>
 
                         </android.support.v7.widget.CardView>
+
                         <android.support.v7.widget.CardView
                             android:id="@+id/card4"
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:layout_margin="10dp">
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -186,14 +190,14 @@
                                     android:id="@+id/image4"
                                     android:layout_width="64dp"
                                     android:layout_height="64dp"
-                                    android:src="@drawable/ic_office" />
+                                    android:src="@drawable/ic_depart" />
 
                                 <TextView
                                     android:id="@+id/text4"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
-                                    android:text="City Improvement Committee Chairman"
+                                    android:text="Departments"
                                     android:textAlignment="center"
                                     android:textSize="14dp"
                                     android:textStyle="bold" />
@@ -203,20 +207,22 @@
                         </android.support.v7.widget.CardView>
 
                     </LinearLayout>
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_marginTop="10dp"
 
-                        android:gravity="center"
-                        android:clipToPadding="false"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginTop="10dp"
+                        android:clipToPadding="false"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
                         <android.support.v7.widget.CardView
                             android:id="@+id/card5"
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:layout_margin="10dp">
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -227,14 +233,14 @@
                                     android:id="@+id/image5"
                                     android:layout_width="64dp"
                                     android:layout_height="64dp"
-                                    android:src="@drawable/ic_business" />
+                                    android:src="@drawable/ic_zone" />
 
                                 <TextView
                                     android:id="@+id/text5"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
-                                    android:text="Law Committee Chairman"
+                                    android:text="Zonal Officies"
                                     android:textAlignment="center"
                                     android:textSize="14sp"
                                     android:textStyle="bold" />
@@ -242,11 +248,13 @@
                             </LinearLayout>
 
                         </android.support.v7.widget.CardView>
+
                         <android.support.v7.widget.CardView
                             android:id="@+id/card6"
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:layout_margin="10dp">
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -257,87 +265,14 @@
                                     android:id="@+id/image6"
                                     android:layout_width="64dp"
                                     android:layout_height="64dp"
-                                    android:src="@drawable/ic_womanandchild" />
+                                    android:src="@drawable/ic_comm" />
 
                                 <TextView
                                     android:id="@+id/text6"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
-                                    android:text="Woman and Child Development Committee Chairman "
-                                    android:textAlignment="center"
-                                    android:textSize="12sp"
-                                    android:textStyle="bold" />
-
-
-                            </LinearLayout>
-
-                        </android.support.v7.widget.CardView>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="20dp"
-                        android:gravity="center"
-                        android:clipToPadding="false"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <android.support.v7.widget.CardView
-                            android:id="@+id/card7"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:layout_margin="10dp">
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <ImageView
-                                    android:id="@+id/image7"
-                                    android:layout_width="64dp"
-                                    android:layout_height="64dp"
-                                    android:src="@drawable/ic_people" />
-
-                                <TextView
-                                    android:id="@+id/text7"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="All Committees "
-                                    android:textAlignment="center"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-                            </LinearLayout>
-
-                        </android.support.v7.widget.CardView>
-                        <android.support.v7.widget.CardView
-                            android:id="@+id/card8"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:layout_margin="10dp">
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <ImageView
-                                    android:id="@+id/image8"
-                                    android:layout_width="64dp"
-                                    android:layout_height="64dp"
-                                    android:src="@drawable/ic_users" />
-
-                                <TextView
-                                    android:id="@+id/text8"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="All Ward Members"
+                                    android:text="Officers And Employees"
                                     android:textAlignment="center"
                                     android:textSize="14sp"
                                     android:textStyle="bold" />
@@ -348,6 +283,7 @@
                         </android.support.v7.widget.CardView>
 
                     </LinearLayout>
+
 
                 </LinearLayout>
             </ScrollView>
@@ -355,7 +291,4 @@
 
         </LinearLayout>
     </LinearLayout>
-
-
-
-</FrameLayout>
+</RelativeLayout>

@@ -5,6 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.ash.smartamravati.activity.admin.profile.AdminProfile">
+
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -105,18 +108,18 @@
 
         <EditText
 
-            android:id="@+id/address"
-            android:layout_width="350dp"
-            android:layout_height="50dp"
-            android:layout_alignStart="@+id/mobileNo"
+        android:id="@+id/address"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/mobileNo"
 
-            android:layout_below="@+id/mobileNo"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:hint="Permanent Address"
-            android:inputType="textPostalAddress"
-            android:textAlignment="center"
-            android:textSize="25sp" />
+        android:layout_below="@+id/mobileNo"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:hint="Permanent Address"
+        android:inputType="textPostalAddress"
+        android:textAlignment="center"
+        android:textSize="25sp" />
 
         <EditText
 

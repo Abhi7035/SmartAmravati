@@ -40,9 +40,8 @@ public class AdminLogin extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
         if(firebaseAuth.getCurrentUser() != null){
-            firebaseAuth.signOut();
             finish();
-            startActivity(new Intent(getApplicationContext(), Page3.class));
+            startActivity(new Intent(getApplicationContext(), AdminDashboard.class));
 
         }
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
