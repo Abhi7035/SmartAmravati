@@ -50,9 +50,9 @@ public class ZonalOffices extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_zonal_offices);
 
         mStorageReference = FirebaseStorage.getInstance().getReference();
-        mDatabaseReference = FirebaseDatabase.getInstance().getReference().child("Zonal Offices List");
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference().child("Administration").child("Zonal_Offices List");
 
-
+        textViewStatus = (TextView) findViewById(R.id.textViewStatus);
         editTextFilename = (EditText) findViewById(R.id.editTextFileName);
         progressBar = (ProgressBar) findViewById(R.id.progressbar);
 
@@ -95,8 +95,6 @@ public class ZonalOffices extends AppCompatActivity implements View.OnClickListe
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                         progressBar.setVisibility(View.GONE);
                         textViewStatus.setText("File Uploaded Successfully");
-
-
 
                         Upload upload = new Upload(editTextFilename.getText().toString(), taskSnapshot.getDownloadUrl().toString());
                         mDatabaseReference.setValue(upload);

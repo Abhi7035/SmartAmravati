@@ -1,15 +1,14 @@
-package com.example.ash.smartamravati.activity.user.dashboard.ElectedOfficials;
+package com.example.ash.smartamravati.activity.user.dashboard.Administration;
 
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.webkit.WebView;
 
 import com.example.ash.smartamravati.R;
+import com.example.ash.smartamravati.activity.user.dashboard.ElectedOfficials.AllCommittees;
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
 import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
-import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -21,19 +20,14 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.shockwave.pdfium.PdfDocument;
 
-
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 
-import javax.net.ssl.HttpsURLConnection;
-
-public class AllCommittees extends AppCompatActivity {
-
+public class DepartmentInfo extends AppCompatActivity {
     PDFView pdfView;
 
     Integer pageNumber = 0;
@@ -46,7 +40,7 @@ public class AllCommittees extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_all_committees);
+        setContentView(R.layout.activity_department_info);
 
         pdfView = (PDFView) findViewById(R.id.pdfView);
 
@@ -57,7 +51,7 @@ public class AllCommittees extends AppCompatActivity {
         mStorageRef = FirebaseStorage.getInstance().getReference();
 
         DatabaseReference mRootRefer = FirebaseDatabase.getInstance().getReference();
-        DatabaseReference mChildrefer = mRootRefer.child("Elected Officials").child("All Committee List").child("url");
+        DatabaseReference mChildrefer = mRootRefer.child("Administration").child("Departments List").child("url");
 
         mChildrefer.addValueEventListener(new ValueEventListener() {
             @Override
@@ -65,7 +59,8 @@ public class AllCommittees extends AppCompatActivity {
 
                 url = dataSnapshot.getValue().toString();
 
-                 new RetrievePDFStream().execute(url);
+                new DepartmentInfo.RetrievePDFStream().execute(url);
+
 
             }
 
@@ -75,22 +70,22 @@ public class AllCommittees extends AppCompatActivity {
             }
         });
 
-      //  new RetrievePDFStream().execute(url);
+        //  new RetrievePDFStream().execute(url);
     }
 
 
     class RetrievePDFStream extends AsyncTask<String,Void,InputStream> implements OnPageChangeListener, OnLoadCompleteListener {
 
-       @Override
-       protected InputStream doInBackground(String... strings) {
-           InputStream inputStream = null;
+        @Override
+        protected InputStream doInBackground(String... strings) {
+            InputStream inputStream = null;
             try{
-               URL url = new URL(strings[0]);
-               HttpURLConnection urlConnection = (HttpURLConnection)url.openConnection();
-               if(urlConnection.getResponseCode() == 200)
-               {
-                   inputStream = new BufferedInputStream(urlConnection.getInputStream());
-               }
+                URL url = new URL(strings[0]);
+                HttpURLConnection urlConnection = (HttpURLConnection)url.openConnection();
+                if(urlConnection.getResponseCode() == 200)
+                {
+                    inputStream = new BufferedInputStream(urlConnection.getInputStream());
+                }
             }
             catch (IOException e)
             {
@@ -115,7 +110,7 @@ public class AllCommittees extends AppCompatActivity {
         public void onPageChanged(int page, int pageCount) {
 
             pageNumber = page;
-            setTitle(String.format("%s %s / %s","All_Committee_List_2017.pdf", page + 1, pageCount));
+            setTitle(String.format("%s %s / %s","All Department List", page + 1, pageCount));
 
         }
 
@@ -139,4 +134,5 @@ public class AllCommittees extends AppCompatActivity {
         }
 
     }
+
 }

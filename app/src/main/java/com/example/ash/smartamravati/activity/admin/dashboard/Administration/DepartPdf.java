@@ -55,7 +55,7 @@ public class DepartPdf extends AppCompatActivity implements View.OnClickListener
 
 
         mStorageReference = FirebaseStorage.getInstance().getReference();
-        mDatabaseReference = FirebaseDatabase.getInstance().getReference().child("Departments List");
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference().child("Administration").child("Departments List");
 
         textViewStatus = (TextView) findViewById(R.id.textViewStatus);
         editTextFilename = (EditText) findViewById(R.id.editTextFileName);
@@ -101,8 +101,6 @@ public class DepartPdf extends AppCompatActivity implements View.OnClickListener
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                         progressBar.setVisibility(View.GONE);
                         textViewStatus.setText("File Uploaded Successfully");
-
-
 
                         Upload upload = new Upload(editTextFilename.getText().toString(), taskSnapshot.getDownloadUrl().toString());
                         mDatabaseReference.setValue(upload);

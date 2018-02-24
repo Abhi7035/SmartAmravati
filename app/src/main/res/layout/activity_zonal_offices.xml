@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/tv_header3"
+        android:id="@+id/tv_header"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="@color/colorPrimaryDark"
@@ -20,7 +20,7 @@
     </TextView>
 
     <EditText
-        android:id="@+id/editTextFileName3"
+        android:id="@+id/editTextFileName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
@@ -28,7 +28,7 @@
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
     <Button
-        android:id="@+id/buttonUploadFile3"
+        android:id="@+id/buttonUploadFile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextFileName"

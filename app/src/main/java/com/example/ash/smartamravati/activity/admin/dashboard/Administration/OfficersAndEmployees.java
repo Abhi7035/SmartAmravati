@@ -32,6 +32,7 @@ import java.util.List;
 
 public class OfficersAndEmployees extends AppCompatActivity implements View.OnClickListener {
 
+
     final static int PICK_PDF_CODE = 2342;
 
     TextView textViewStatus;
@@ -42,19 +43,22 @@ public class OfficersAndEmployees extends AppCompatActivity implements View.OnCl
     DatabaseReference mDatabaseReference;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_officers_and_employees);
 
+
         mStorageReference = FirebaseStorage.getInstance().getReference();
-        mDatabaseReference = FirebaseDatabase.getInstance().getReference().child("Officers and Employees List");
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference().child("Administration").child("Officers and Employees List");
 
-
+        textViewStatus = (TextView) findViewById(R.id.textViewStatus);
         editTextFilename = (EditText) findViewById(R.id.editTextFileName);
         progressBar = (ProgressBar) findViewById(R.id.progressbar);
 
         findViewById(R.id.buttonUploadFile).setOnClickListener(this);
+
 
 
     }

@@ -72,7 +72,13 @@
         <activity android:name=".activity.admin.dashboard.Administration.ZonalOffices" />
         <activity android:name=".activity.admin.dashboard.Administration.OfficersAndEmployees" />
         <activity android:name=".activity.admin.dashboard.ElectedOfficials.AllCommittesList" />
-        <activity android:name=".activity.admin.dashboard.ElectedOfficials.AllMembersList"></activity>
+        <activity android:name=".activity.admin.dashboard.ElectedOfficials.AllMembersList" />
+        <activity android:name=".activity.user.dashboard.Administration.CommissionerInfo" />
+        <activity android:name=".activity.user.dashboard.Administration.AdditionalCommissionerInfo" />
+        <activity android:name=".activity.user.dashboard.Administration.DeputyCommissionerInfo" />
+        <activity android:name=".activity.user.dashboard.Administration.DepartmentInfo" />
+        <activity android:name=".activity.user.dashboard.Administration.ZonalOfficesInfo" />
+        <activity android:name=".activity.user.dashboard.Administration.OfficersAndEmployeesInfo"></activity>
     </application>
 
 </manifest>

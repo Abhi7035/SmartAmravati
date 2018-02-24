@@ -9,6 +9,15 @@ import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
 import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
 import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 import com.shockwave.pdfium.PdfDocument;
 
 import java.io.BufferedInputStream;
@@ -24,15 +33,45 @@ public class AllMembers extends AppCompatActivity implements OnPageChangeListene
 
     Integer pageNumber = 0;
 
+    FirebaseAuth firebaseAuth;
+    StorageReference mStorageRef;
+
+    private  String url;
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_members);
 
 
+        firebaseAuth = FirebaseAuth.getInstance();
+        final FirebaseUser user = firebaseAuth.getCurrentUser();
+
+        mStorageRef = FirebaseStorage.getInstance().getReference();
+
+        DatabaseReference mRootRefer = FirebaseDatabase.getInstance().getReference();
+        DatabaseReference mChildrefer = mRootRefer.child("Elected Officials").child("All Member List").child("url");
+
+        mChildrefer.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                url = dataSnapshot.getValue().toString();
+
+                new RetrievePDFStream().execute(url);
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
         pdfView = (PDFView)findViewById(R.id.pdfView);
 
-        new RetrievePDFStream().execute("https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Elected_Officials_Profile%2FAllWardMembers%2F3.%20All_Members_List_2017.pdf?alt=media&token=da929b01-4f91-49e5-ac31-d5e7a825fe72");
     }
 
 
