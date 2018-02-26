@@ -14,6 +14,7 @@ import com.example.ash.smartamravati.R;
  */
 public class AboutUsFragment extends Fragment {
 
+    private View v;
 
     public AboutUsFragment() {
         // Required empty public constructor
@@ -24,7 +25,8 @@ public class AboutUsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_about_us, container, false);
+        v =  inflater.inflate(R.layout.fragment_about_us, container, false);
+        return v;
     }
 
 }

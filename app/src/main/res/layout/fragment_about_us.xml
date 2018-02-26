@@ -3,11 +3,111 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.ash.smartamravati.activity.user.dashboard.menu.AboutUsFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="About us"
+                    android:textAlignment="center"
+                    android:textSize="35dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="85dp"
+                android:src="@drawable/abhishke1" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/imageView2"
+                android:layout_marginTop="16dp"
+                android:text="Abishek Bande \n GCOEA \n abhibande3@gmail.com  \n 8408865688 "
+                android:textAlignment="center"
+                android:textColor="@color/bg_main"
+                android:textSize="25dp" />
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="390dp"
+                android:src="@drawable/zuber" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/imageView3"
+                android:layout_marginTop="16dp"
+                android:text="Zuber Siddiqui \n GCOEA \n mohdzuber857@gmail.com  \n 9028234839 "
+                android:textAlignment="center"
+                android:textColor="@color/bg_main"
+                android:textSize="25dp" />
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="690dp"
+                android:src="@drawable/kiran" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/imageView4"
+                android:layout_marginTop="16dp"
+                android:text="Kiran Adlok \n GCOEA \n adlokkiran@gmail.com  \n 7841846257 "
+                android:textAlignment="center"
+                android:textColor="@color/bg_main"
+                android:textSize="25dp" />
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="990dp"
+                android:src="@drawable/bawne1" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/imageView5"
+                android:layout_marginTop="16dp"
+                android:text="Sudhanshu Bawne \n GCOEA \n bhavin.bawne@gmail.com  \n 8087551105 "
+                android:textAlignment="center"
+                android:textColor="@color/bg_main"
+                android:textSize="25dp" />
+
+        </RelativeLayout>
+    </ScrollView>
 
 </FrameLayout>
