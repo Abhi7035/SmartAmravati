@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ash.smartamravati.activity.user.dashboard.FAQ.Water_Faq">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:text="
+  \n Que.1)नवीन नळ कनेक्शन घेण्यासाठीचा अथवा रिकनेक्शन घेण्यासाठीचा अर्ज कोठे मिळेल?
+\n\n Ans- विभागीय कार्यालय.
+\n\n Que.2)नवीन नळ कनेक्शन घेण्यासाठी कोणत्या कागदपत्रांची आवश्यकता असते?
+\n\n Ans- नळ कनेक्शन फॉर्मच्या पाठीमागील पानावर देणेत आले आहे.
+\n\n Que.3)नवीन नळ कनेक्शन मंजुरीसाठी किती खर्च येईल?
+\n\n Ans- कनेक्शन आकार, प्रकार व रस्त्याच्या प्रकारानुसार आहे. उपअभियंता पाणी पुरवठा विभागीय कार्यालय यांचेकडे चौकशी करावी.
+\n\n Que.4)पाण्याचा नवीन मिटर कसा व कोठे मिळेल?
+\n\n Ans- प्लंबींग साहित्य विक्री दुकानामध्ये उपलब्ध होउ शकते परंतु मीटर आय.एस.आय. मार्क असणे आवश्यक आहे.
+\n\n Que.5)पाणीपट्टीचे दर काय आहेत?
+\n\n Ans- घरगुती – र.रु.05/- प्रती 1000 लिटर्स.
+\n बिगरघरगुती – र.रु.22/- प्रती 1000 लिटर्स.
+\n व्यावसायिक – र.रु.27/- प्रती 1000 लिटर्स.
+\n\n Que.6)पाणीपुरवठ्यासंबंधीच्या विविध तक्रारींच्या निवारणासाठी किती कालावधी लागतो?
+\n\n Ans- तक्रारीच्या स्वरूपावर अवलंबुन आहे.
+\n\n Que.7)पाण्याच्या टँकरसंबंधित मागणी कोठे नोंदवता येईल? तसेच त्याचे दर काय आहेत?
+\n\n Ans- संबंधित पाणी पुरवठा विभागाचे उपअभियंता / विभागीय अधिकारी कार्यालय.
+\n\n Que.8)मनपाकडे मान्यताप्राप्त परवानाधारक प्लंबर आहेत का?
+\n\n Ans- होय.
+\n\n Que.9)रजिस्टर्ड प्लंबर विभागानुसार आहेत का ?
+\n\n Ans- होय.
+\n\n Que.10)एका विभागाचा रजिस्टर्ड प्लंबर दुस-या विभागात नळ जोडणी करू शकतो का ?
+\n\n Ans- होय.
+\n\n Que.10) प्लंबरसाठी परवाण्याकरीता अर्ज कुठे मिळेल ?
+\n\n Ans- विभागीय कार्यालय.
+\n\n Que.11)भरलेला अर्ज कुठे जमा करावा ?
+\n\n Ans- विभागीय कार्यालय.
+\n\n Que.12)परिपुर्ण अर्ज सादर केल्यानंतर किती दिवसांत परवाना मिळतो ?
+\n\n Ans- प्रशिक्षण कालावधी पुर्ण झाल्यानंतर 15 दिवसात.
+\n\n Que.13)परवाना अर्ज सादर करतांना अर्जासोबत किती शुल्क भरावे लागते ?
+\n\n Ans- प्लंबींग अनामत फी र.रू.250/-
+\n प्लंबींग अनामत परवाना फी र.रू.50/-
+\n\n Que.14)परवाण्याचे नुतनीकरण करतांना कोणती कागदपत्रे सादर करावी ?
+\n\n Ans- वर्षभरात केलेल्या कामांची यादी व काम पूर्णत्वाचा दाखला जमा केल्याची माहिती फी र.रू.50/-
+\n\n Que.15)परवाण्याचे नुतनीकरण किती वर्षासाठी करता येते ?
+\n\n Ans- एक वर्ष."
+                android:textSize="22dp"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

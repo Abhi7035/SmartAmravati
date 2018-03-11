@@ -8,11 +8,12 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_office"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ic_office"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:name=".activity.other.SmartAmravati">
         <activity android:name=".activity.start.Page0">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -78,26 +79,33 @@
         <activity android:name=".activity.user.dashboard.Administration.DeputyCommissionerInfo" />
         <activity android:name=".activity.user.dashboard.Administration.DepartmentInfo" />
         <activity android:name=".activity.user.dashboard.Administration.ZonalOfficesInfo" />
-        <activity android:name=".activity.user.dashboard.Administration.OfficersAndEmployeesInfo"></activity>
+        <activity android:name=".activity.user.dashboard.Administration.OfficersAndEmployeesInfo" />
+        <activity android:name=".activity.user.dashboard.FAQ.Fire_Faq" />
+        <activity android:name=".activity.user.dashboard.FAQ.Garden_Faq" />
+        <activity android:name=".activity.user.dashboard.FAQ.Marriage_Faq" />
+        <activity android:name=".activity.user.dashboard.FAQ.Town_Faq" />
+        <activity android:name=".activity.user.dashboard.FAQ.Water_Faq" />
+        <activity android:name=".activity.user.dashboard.AmravatiCity.Tourist_Location" />
+        <activity android:name=".activity.user.dashboard.AmravatiCity.Introduction" />
 
-        <service
-            android:name=".activity.other.MyFirebaseMessagingService">
+        <service android:name=".activity.other.MyFirebaseMessagingService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
-        <service
-            android:name=".activity.other.MyFirebaseInstanceIDService">
+        <service android:name=".activity.other.MyFirebaseInstanceIDService">
             <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorPrimary" />
-    </application>
 
+        <activity android:name=".activity.user.dashboard.FAQ.Health_FAQ" />
+        <activity android:name=".activity.user.dashboard.AmravatiCity.GenralInformationAboutCity" />
+        <activity android:name=".activity.user.dashboard.AmravatiCity.CityMap"></activity>
+    </application>
 
 </manifest>

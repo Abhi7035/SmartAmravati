@@ -1,10 +1,12 @@
 package com.example.ash.smartamravati.activity.user.dashboard.ElectedOfficials;
 
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.ash.smartamravati.R;
+import com.example.ash.smartamravati.activity.user.dashboard.Administration.DepartmentInfo;
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
 import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
@@ -84,6 +86,17 @@ public class AllMembers extends AppCompatActivity implements OnPageChangeListene
 
     class RetrievePDFStream extends AsyncTask<String,Void,InputStream> implements OnPageChangeListener, OnLoadCompleteListener {
 
+        ProgressDialog progressDialog;
+        protected void onPreExecute()
+        {
+            progressDialog = new ProgressDialog(AllMembers.this);
+            progressDialog.setTitle("getting the content...");
+            progressDialog.setMessage("Please wait...");
+            progressDialog.setCanceledOnTouchOutside(false);
+            progressDialog.show();
+
+        }
+
         @Override
         protected InputStream doInBackground(String... strings) {
             InputStream inputStream = null;
@@ -104,6 +117,7 @@ public class AllMembers extends AppCompatActivity implements OnPageChangeListene
 
         @Override
         protected void onPostExecute(InputStream inputStream) {
+            progressDialog.dismiss();
             pdfView.fromStream(inputStream)
                     .defaultPage(pageNumber)
                     .enableSwipe(true)

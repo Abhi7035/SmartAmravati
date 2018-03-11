@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ash.smartamravati.activity.user.dashboard.FAQ.Health_FAQ">
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="10dp" android:layout_marginLeft="15dp" android:text=" Que.1) उघडी गटारे / नाले यांची साफसफाई करण्याबाबतची तक्रार कुठे करावी?                 \n\n Ans- संबंधीत विभागीय कार्यालय (स्वच्छता निरीक्षक / विभागीय स्वच्छता निरीक्षक) वरील नमुद विभाग निहाय वि. स्व. निरिक्षकांचे नाव / तक्रारनिवारण दुरध्वनी क्रमांक प्रमाणे \n\n Que.2) जन्म मृत्युची नोंद कशी करण्यात येते ? \n\n Ans-  जन्माची नोंद हि जन्म झालेल्या संबंधीत रूग्णालय / दवाखाने यांचेकडून संबंधीत विभागीय कार्यालयास प्राप्त अहवालाच्या आधारे करणेत येते. तसेच, मुत्युची नोंद ही अमरधाम मध्ये विहित नमुन्यात भरून दिलेली माहिती, रूग्णालय / दवाखाने यांचेकडील अहवालाच्या आधारे संबंधीत विभागीय कार्यालयाकडून करणेत येते. \n\n Que.3)जन्म मृत्यु चे दाखले कोठे व किती दिवसांत मिळू शकतात ? \n\n Ans- जन्म मृत्युचे दाखले संबंधीत विभागीय अथवा उपविभागीय कार्यालये येथे सधारणता दोन दिवसांत मिळू शकतात. \n\n Que.4)जन्म मृत्यु दाखले मिळण्यासाठी किती फी लागते ? \n\n Ans- जन्म मृत्यु दाखले मिळण्यासाठी प्रति दाखला र.रू 5 /- इतके शुल्क आहे. \n\n Que.5)जन्म मृत्युची नोंद नसल्यास काय केले पाहिजे ? \n\n Ans- जन्म-मृत्युची नोंद नसल्यास संबंधीत विभागीय कार्यालयाकडे रितसर विहीत नमुन्यातील अर्ज भरून जन्म-मृत्यु दाखल्याची मागणी करावी. त्यानुसार जन्म अथवा मृत्यु नोंदणी नसल्यास तसे लेखी संबंधीत अर्जदारास लेखी कळविले जाते. त्यानुसार मा.कार्यकारी दंडाधिकारी तथा तहसिलदार यांचेकडील लेखी आदेशान्वये विलंब शुल्क आकारून जन्म-मृत्यु नोंद करता येते. \n\n Que.6)शहरातील एकुण घंटागाडयांची संख्या किती आहे? \n\n Ans- एकुण घंटागाडयांची संख्या 121. \n\n Que.7) पाळीव श्वान नोंदणी संदर्भातील प्रक्रीया कोणती ? \n\n Ans- विहित नमुन्यातील अर्जासह अर्जदारांचे रहिवासी पुरावा, श्वानास अँटी रेबीज लस दिल्याचे वैद्यकिय अधिका-याचे प्रमाणपत्र व श्वानाचे 2 फोटोसह आरोग्य मुख्यालय येथे पाळीव श्वान नोंदणी करता येते." android:textSize="22dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

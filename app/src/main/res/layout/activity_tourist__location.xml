@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ash.smartamravati.activity.user.dashboard.AmravatiCity.Tourist_Location">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="Tourist Location"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginTop="80dp"
+                android:background="@android:color/holo_blue_bright"
+                android:text=" \t\t1.  	Ambadevi Temple"
+                android:textColor="@color/bg_register"
+                android:textSize="30dp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginTop="130dp"
+                android:background="@android:color/holo_blue_bright"
+                android:text=" \t\t2.  	Chatri Lake"
+                android:textColor="@color/bg_register"
+                android:textSize="30dp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginTop="180dp"
+                android:background="@android:color/holo_blue_bright"
+                android:text=" \t\t3.  	Chikhaldara"
+                android:textColor="@color/bg_register"
+                android:textSize="30dp"
+                android:textStyle="italic" />
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginTop="230dp"
+                android:background="@android:color/holo_blue_bright"
+                android:text=" \t\t4.  	Satidham (Shri Dham)\n\t\t\t\t   Temple"
+                android:textColor="@color/bg_register"
+                android:textSize="30dp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginTop="315dp"
+                android:background="@android:color/holo_blue_bright"
+                android:text=" \t\t5.  	Shri Bakti Dham\n\t\t\t\t   Temple"
+                android:textColor="@color/bg_register"
+                android:textSize="30dp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/text6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginTop="400dp"
+                android:background="@android:color/holo_blue_bright"
+                android:text=" \t\t6.  	Wadali Lake"
+                android:textColor="@color/bg_register"
+                android:textSize="30dp"
+                android:textStyle="italic" />
+
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+</RelativeLayout>

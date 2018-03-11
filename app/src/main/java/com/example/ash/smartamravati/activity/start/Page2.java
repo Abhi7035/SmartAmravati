@@ -7,7 +7,9 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.example.ash.smartamravati.R;
+import com.example.ash.smartamravati.activity.other.CircleTransform;
 
 public class Page2 extends AppCompatActivity {
 ImageView imageView;
@@ -19,7 +21,7 @@ ImageView imageView;
         imageView=(ImageView)findViewById(R.id.imageView);
 
         Animation animation= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.welcome_animation);
-        imageView.setAnimation(animation);
+       imageView.setAnimation(animation);
 
         animation.setAnimationListener(new Animation.AnimationListener() {
             @Override

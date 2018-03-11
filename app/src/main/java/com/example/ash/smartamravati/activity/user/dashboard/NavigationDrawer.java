@@ -89,7 +89,9 @@ public class NavigationDrawer extends AppCompatActivity
 
             DatabaseReference mRootRefer = FirebaseDatabase.getInstance().getReference();
             DatabaseReference mChildrefer = mRootRefer.child("Users").child(userID).child("user Name");
+            mChildrefer.keepSynced(true);
             DatabaseReference mChildrefer1 = mRootRefer.child("Users").child(userID).child("user Email");
+            mChildrefer1.keepSynced(true);
             DatabaseReference mChildrefer2 = mRootRefer.child("Users").child(userID).child("Profile pic url");
 
             mChildrefer.addValueEventListener(new ValueEventListener() {
