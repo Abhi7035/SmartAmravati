@@ -120,6 +120,7 @@ public class AllMembers extends AppCompatActivity implements OnPageChangeListene
             progressDialog.dismiss();
             pdfView.fromStream(inputStream)
                     .defaultPage(pageNumber)
+                    .scrollHandle(new DefaultScrollHandle(AllMembers.this))
                     .enableSwipe(true)
                     .swipeHorizontal(false)
                     .onPageChange(this)

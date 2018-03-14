@@ -117,6 +117,7 @@ public class AllCommittees extends AppCompatActivity {
             progressDialog.dismiss();
             pdfView.fromStream(inputStream)
                     .defaultPage(pageNumber)
+                    .scrollHandle(new DefaultScrollHandle(AllCommittees.this))
                     .enableSwipe(true)
                     .swipeHorizontal(false)
                     .onPageChange(this)

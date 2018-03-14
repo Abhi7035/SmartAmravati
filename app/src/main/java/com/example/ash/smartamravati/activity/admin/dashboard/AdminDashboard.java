@@ -13,6 +13,7 @@ import com.bumptech.glide.Glide;
 import com.example.ash.smartamravati.R;
 import com.example.ash.smartamravati.activity.admin.dashboard.Administration.DashAdminAdministration;
 import com.example.ash.smartamravati.activity.admin.dashboard.ElectedOfficials.DashAdminElectedOfficials;
+import com.example.ash.smartamravati.activity.admin.dashboard.Notification.DashAdminNotification;
 import com.example.ash.smartamravati.activity.admin.login.AdminLogin;
 import com.example.ash.smartamravati.activity.other.CircleTransform;
 import com.google.firebase.auth.FirebaseAuth;
@@ -126,6 +127,18 @@ public class AdminDashboard extends AppCompatActivity {
             }
         });
 
+        text4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                notification();
+            }
+        });
+        image4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                notification();
+            }
+        });
 
 
         textView8.setOnClickListener(new View.OnClickListener() {
@@ -214,6 +227,12 @@ public class AdminDashboard extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void notification() {
+
+        Intent myIntent = new Intent(this, DashAdminNotification.class);
+        startActivity(myIntent);
     }
 
     private void adminis() {

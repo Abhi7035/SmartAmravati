@@ -10,6 +10,7 @@ import com.example.ash.smartamravati.activity.user.dashboard.ElectedOfficials.Al
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
 import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
+import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -111,6 +112,7 @@ public class DepartmentInfo extends AppCompatActivity {
             pdfView.fromStream(inputStream)
                     .defaultPage(pageNumber)
                     .enableSwipe(true)
+                    .scrollHandle(new DefaultScrollHandle(DepartmentInfo.this))
                     .swipeHorizontal(false)
                     .onPageChange(this)
                     .enableAnnotationRendering(true)
