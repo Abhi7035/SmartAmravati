@@ -18,15 +18,12 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.ash.smartamravati.R;
 import com.example.ash.smartamravati.activity.user.dashboard.sidemenu.AdminContactFragment;
-import com.example.ash.smartamravati.activity.user.dashboard.sidemenu.CallCenterFragment;
 import com.example.ash.smartamravati.activity.other.CircleTransform;
-import com.example.ash.smartamravati.activity.user.dashboard.sidemenu.GalleryFragment;
 import com.example.ash.smartamravati.activity.user.dashboard.sidemenu.HomeFragment;
 import com.example.ash.smartamravati.activity.user.dashboard.sidemenu.NotificationFragment;
 import com.example.ash.smartamravati.activity.user.dashboard.sidemenu.OnlineAppServicesStatusFragment;
 import com.example.ash.smartamravati.activity.user.login.Page3;
 import com.example.ash.smartamravati.activity.user.dashboard.sidemenu.ServicesFragment;
-import com.example.ash.smartamravati.activity.user.dashboard.sidemenu.SettingFragment;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -195,14 +192,7 @@ public class NavigationDrawer extends AppCompatActivity
             fragmentTransaction.commit();
 
         }
-        else if (id == R.id.nav_gallery) {
 
-            GalleryFragment fragment = new GalleryFragment();
-            FragmentTransaction fragmentTransaction= getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_Home, fragment);
-            fragmentTransaction.commit();
-
-        }
         else if (id == R.id.nav_services) {
 
             OnlineAppServicesStatusFragment fragment = new OnlineAppServicesStatusFragment();
@@ -219,22 +209,8 @@ public class NavigationDrawer extends AppCompatActivity
             fragmentTransaction.commit();
 
         }
-        else if (id == R.id.action_settings) {
 
-            SettingFragment fragment = new SettingFragment();
-            FragmentTransaction fragmentTransaction= getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_Home, fragment);
-            fragmentTransaction.commit();
 
-        }
-        else if (id == R.id.nav_call) {
-
-            CallCenterFragment fragment = new CallCenterFragment();
-            FragmentTransaction fragmentTransaction= getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_Home, fragment);
-            fragmentTransaction.commit();
-
-        }
         else if (id == R.id.nav_mail) {
 
             AdminContactFragment fragment = new AdminContactFragment();

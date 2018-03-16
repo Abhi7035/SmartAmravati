@@ -8,8 +8,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.ash.smartamravati.R;
-import com.example.ash.smartamravati.activity.user.dashboard.menu.MyComplaints;
-import com.example.ash.smartamravati.activity.user.dashboard.menu.NewComplaint;
 
 public class DashAdminNotification extends AppCompatActivity {
 
@@ -55,7 +53,7 @@ public class DashAdminNotification extends AppCompatActivity {
 
 
 
-                Intent myIntent = new Intent(DashAdminNotification.this, AdminPreviousNotifications.class);
+                Intent myIntent = new Intent(DashAdminNotification.this, AdminPreviousNotification.class);
                 startActivity(myIntent);
 
             }
@@ -65,7 +63,7 @@ public class DashAdminNotification extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent myIntent = new Intent(DashAdminNotification.this, AdminPreviousNotifications.class);
+                Intent myIntent = new Intent(DashAdminNotification.this, AdminPreviousNotification.class);
                 startActivity(myIntent);
 
 

@@ -5,4 +5,9 @@
     tools:context="com.example.ash.smartamravati.activity.user.dashboard.sidemenu.NotificationFragment">
 
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/notification_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp" />
 </FrameLayout>

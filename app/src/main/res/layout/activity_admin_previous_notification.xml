@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ash.smartamravati.activity.user.dashboard.Complaints.MyComplaints">
+    tools:context="com.example.ash.smartamravati.activity.admin.dashboard.Notification.AdminPreviousNotification">
 
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/complaint_list_view"
+        android:id="@+id/notification_list_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

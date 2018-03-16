@@ -7,13 +7,13 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
+        android:name=".activity.other.SmartAmravati"
         android:allowBackup="true"
         android:icon="@drawable/ic_office"
         android:label="@string/app_name"
         android:roundIcon="@drawable/ic_office"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:name=".activity.other.SmartAmravati">
+        android:theme="@style/AppTheme">
         <activity android:name=".activity.start.Page0">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,8 +48,8 @@
         <activity android:name=".activity.admin.profile.AdminProfile" />
         <activity android:name=".activity.admin.verification.AdminVerification" />
         <activity android:name=".activity.admin.dashboard.AdminDashboard" />
-        <activity android:name=".activity.user.dashboard.menu.NewComplaint" />
-        <activity android:name=".activity.user.dashboard.menu.MyComplaints" />
+        <activity android:name=".activity.user.dashboard.Complaints.NewComplaint" />
+        <activity android:name=".activity.user.dashboard.Complaints.MyComplaints" />
         <activity android:name=".activity.admin.dashboard.ElectedOfficials.DashAdminElectedOfficials" />
         <activity android:name=".activity.admin.dashboard.ElectedOfficials.MayorProfile" />
         <activity android:name=".activity.admin.dashboard.ElectedOfficials.DeputyMayorProfile" />
@@ -105,7 +105,10 @@
 
         <activity android:name=".activity.user.dashboard.FAQ.Health_FAQ" />
         <activity android:name=".activity.user.dashboard.AmravatiCity.GenralInformationAboutCity" />
-        <activity android:name=".activity.user.dashboard.AmravatiCity.CityMap"></activity>
+        <activity android:name=".activity.user.dashboard.AmravatiCity.CityMap" />
+        <activity android:name=".activity.admin.dashboard.Notification.DashAdminNotification" />
+        <activity android:name=".activity.admin.dashboard.Notification.AdminNewNotification" />
+        <activity android:name=".activity.admin.dashboard.Notification.AdminPreviousNotification" />
     </application>
 
 </manifest>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ash.smartamravati.activity.user.dashboard.menu.NewComplaint">
+    tools:context="com.example.ash.smartamravati.activity.user.dashboard.Complaints.NewComplaint">
 
     <ScrollView android:layout_width="wrap_content" android:layout_height="wrap_content">
 
@@ -13,6 +13,22 @@
             android:layout_height="wrap_content"
             android:paddingBottom="30dp"
             android:paddingTop="@dimen/activity_vertical_margin">
+
+
+            <ProgressBar
+                android:id="@+id/new_post_progress"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/imageView"
+                android:layout_marginTop="19dp"
+                android:indeterminate="true"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
 
             <TextView
                 android:id="@+id/textView1"
@@ -123,8 +139,8 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_below="@+id/textView7"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
@@ -144,7 +160,7 @@
                 android:layout_below="@+id/imageView"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="60dp"
                 android:background="#e2351b"
                 android:gravity="center"
                 android:paddingTop="0dp"

@@ -260,14 +260,14 @@
                                     android:id="@+id/image4"
                                     android:layout_width="64dp"
                                     android:layout_height="64dp"
-                                    android:src="@drawable/ic_contact" />
+                                    android:src="@drawable/email" />
 
                                 <TextView
                                     android:id="@+id/text4"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
-                                    android:text="IMP Contacts"
+                                    android:text="Notification"
                                     android:textAlignment="center"
                                     android:textSize="18sp"
                                     android:textStyle="bold" />

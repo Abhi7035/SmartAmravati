@@ -4,8 +4,6 @@ package com.example.ash.smartamravati.activity.user.dashboard.menu;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.ash.smartamravati.R;
-import com.example.ash.smartamravati.activity.user.dashboard.sidemenu.GalleryFragment;
+import com.example.ash.smartamravati.activity.user.dashboard.Complaints.MyComplaints;
+import com.example.ash.smartamravati.activity.user.dashboard.Complaints.NewComplaint;
 
 
 public class ComplaintsFragment extends Fragment {
@@ -55,6 +54,7 @@ public class ComplaintsFragment extends Fragment {
 
                 Intent intent = new Intent(getActivity(), NewComplaint.class);
                 startActivity(intent);
+
 
             }
         });

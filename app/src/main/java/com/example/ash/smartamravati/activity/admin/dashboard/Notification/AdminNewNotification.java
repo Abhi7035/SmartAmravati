@@ -16,15 +16,14 @@ import android.widget.Toast;
 
 import com.example.ash.smartamravati.R;
 import com.example.ash.smartamravati.activity.admin.dashboard.AdminDashboard;
-import com.example.ash.smartamravati.activity.admin.profile.AdminProfile;
-import com.example.ash.smartamravati.activity.user.dashboard.NavigationDrawer;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FieldValue;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -36,37 +35,43 @@ import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
+
+import id.zelory.compressor.Compressor;
 
 public class AdminNewNotification extends AppCompatActivity {
+
     private ImageView newPostImage;
-    private EditText newPostTittle, newPostDesc;
+    private EditText newPostDesc;
     private Button newPostBtn;
 
+    private Uri postImageUri = null;
 
-    DatabaseReference UserDatabase;
-    StorageReference StorageRef;
-
-    Uri imageHoldUri = null;
     private ProgressBar newPostProgress;
 
+    private StorageReference storageReference;
+    private FirebaseFirestore firebaseFirestore;
+    private FirebaseAuth firebaseAuth;
 
+    private String current_user_id;
 
+    private Bitmap compressedImageFile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_new_notification);
 
-        UserDatabase = FirebaseDatabase.getInstance().getReference();
-        StorageRef = FirebaseStorage.getInstance().getReference();
+        storageReference = FirebaseStorage.getInstance().getReference();
+        firebaseFirestore = FirebaseFirestore.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
+
 
 
         newPostImage = findViewById(R.id.new_post_image);
         newPostDesc = findViewById(R.id.new_post_desc);
-        newPostTittle = findViewById(R.id.new_post_tittle);
         newPostBtn = findViewById(R.id.post_btn);
         newPostProgress = findViewById(R.id.new_post_progress);
-
 
         newPostImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,45 +92,105 @@ public class AdminNewNotification extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                final String tittle = newPostTittle.getText().toString();
-
                 final String desc = newPostDesc.getText().toString();
 
-                if(!TextUtils.isEmpty(tittle) && !TextUtils.isEmpty(desc) && imageHoldUri != null){
+                if(!TextUtils.isEmpty(desc) && postImageUri != null){
 
                     newPostProgress.setVisibility(View.VISIBLE);
 
-                    StorageReference mChildStorage = StorageRef.child("Notification").child(imageHoldUri.getLastPathSegment());
+                    final String randomName = UUID.randomUUID().toString();
 
-
-                    mChildStorage.putFile(imageHoldUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    StorageReference filePath = storageReference.child("post_images").child(randomName + ".jpg");
+                    filePath.putFile(postImageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                         @Override
-                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        public void onComplete(@NonNull final Task<UploadTask.TaskSnapshot> task) {
 
-                            final Uri imageUrl = taskSnapshot.getDownloadUrl();
+                            final String downloadUri = task.getResult().getDownloadUrl().toString();
 
-                            UserDatabase.child("Notification").child(tittle).child("Tittle").setValue(tittle);
-                            UserDatabase.child("Notification").child(tittle).child("Desc").setValue(desc);
-                            UserDatabase.child("Notification").child(tittle).child("Notification pic url").setValue(imageUrl.toString());
+                            if(task.isSuccessful()){
 
-                            newPostProgress.setVisibility(View.INVISIBLE);
+                                File newImageFile = new File(postImageUri.getPath());
+                                try {
+
+                                    compressedImageFile = new Compressor(AdminNewNotification.this)
+                                            .setMaxHeight(100)
+                                            .setMaxWidth(100)
+                                            .setQuality(2)
+                                            .compressToBitmap(newImageFile);
+
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+
+                                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                                compressedImageFile.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+                                byte[] thumbData = baos.toByteArray();
+
+                                UploadTask uploadTask = storageReference.child("post_images/thumbs")
+                                        .child(randomName + ".jpg").putBytes(thumbData);
+
+                                uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                                    @Override
+                                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+
+                                        String downloadthumbUri = taskSnapshot.getDownloadUrl().toString();
+
+                                        Map<String, Object> postMap = new HashMap<>();
+                                        postMap.put("image_url", downloadUri);
+                                        postMap.put("image_thumb", downloadthumbUri);
+                                        postMap.put("desc", desc);
+                                        postMap.put("timestamp", FieldValue.serverTimestamp());
+
+                                        firebaseFirestore.collection("Posts").add(postMap).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<DocumentReference> task) {
+
+                                                if(task.isSuccessful()){
+
+                                                    Toast.makeText(AdminNewNotification.this, "Post was added", Toast.LENGTH_LONG).show();
+                                                    Intent mainIntent = new Intent(AdminNewNotification.this, AdminDashboard.class);
+                                                    startActivity(mainIntent);
+                                                    finish();
+
+                                                } else {
 
 
-                            Toast.makeText(AdminNewNotification.this, "Notification Posted Sucessfully", Toast.LENGTH_LONG).show();
-                            finish();
-                            Intent myIntent = new Intent(AdminNewNotification.this, AdminDashboard.class);
-                            startActivity(myIntent);
+                                                }
+
+                                                newPostProgress.setVisibility(View.INVISIBLE);
+
+                                            }
+                                        });
+
+                                    }
+                                }).addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+
+                                        //Error handling
+
+                                    }
+                                });
+
+
+                            } else {
+
+                                Toast.makeText(AdminNewNotification.this, "Select all Fields", Toast.LENGTH_LONG).show();
+
+                                newPostProgress.setVisibility(View.INVISIBLE);
+
+                            }
+
                         }
-
                     });
-                }
-                else {
-                    Toast.makeText(AdminNewNotification.this, "Please select All Fields", Toast.LENGTH_LONG).show();
-                }
+
 
                 }
 
-            });
+            }
+        });
+
+
     }
 
     @Override
@@ -136,8 +201,8 @@ public class AdminNewNotification extends AppCompatActivity {
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
             if (resultCode == RESULT_OK) {
 
-                imageHoldUri = result.getUri();
-                newPostImage.setImageURI(imageHoldUri);
+                postImageUri = result.getUri();
+                newPostImage.setImageURI(postImageUri);
 
             } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
 
@@ -147,6 +212,4 @@ public class AdminNewNotification extends AppCompatActivity {
         }
 
     }
-
-
 }
