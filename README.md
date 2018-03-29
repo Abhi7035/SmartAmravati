@@ -42,8 +42,7 @@ FIREBASE BACKEND - DATABASE
 		    <td style="padding:30px">
             	<img src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshots%2FApplication%20UI%2FInkedScreenshot_20180329-180041_LI.jpg?alt=media&token=7d018324-63e6-4fb0-ba9c-832321ea8073" width="200" height="350" style="float: left; margin-right: 76%; margin-bottom: 0.5em;">
 		    <p>User Navigation Drawer </p>
-             </td>
-		   
+             </td>   
         </tr>
     </table>
 </div>
