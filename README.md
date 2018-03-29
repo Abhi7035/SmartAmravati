@@ -59,8 +59,38 @@ FIREBASE BACKEND - DATABASE
 		    <p> AMC Elected Profiles </p>
              </td>
 	</tr>
+	<tr>
+ <td style="padding:30px">
+            	<img src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshots%2FApplication%20UI%2FScreenshot_20180329-180226.png?alt=media&token=c0679d96-76a0-4161-838b-01c9d19e4142" width="200" height="350" style="float: left; margin-right: 76%; margin-bottom: 0.5em;">
+		    <p> Mayor Profile </p>
+             </td>
+	 <td style="padding:30px">
+            	<img src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshots%2FApplication%20UI%2FScreenshot_20180329-180336.png?alt=media&token=f2d20f81-aced-4f21-9910-4bc4f2e696aa" width="200" height="350" style="float: left; margin-right: 76%; margin-bottom: 0.5em;">
+		    <p> Commissioner Profile </p>
+             </td>
+	 <td style="padding:30px">
+            	<img src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshots%2FApplication%20UI%2FScreenshot_20180329-180425.png?alt=media&token=fbdcdde4-42c3-44f9-82ac-6500a8b7f99f" width="200" height="350" style="float: left; margin-right: 76%; margin-bottom: 0.5em;">
+		    <p> AMC Elected Members </p>
+             </td>
+	</tr>
+	<tr>
+ <td style="padding:30px">
+            	<img src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshots%2FApplication%20UI%2FScreenshot_20180329-180440.png?alt=media&token=51199dba-4dc3-4e41-8f71-fe9dcb16be21" width="200" height="350" style="float: left; margin-right: 76%; margin-bottom: 0.5em;">
+		    <p> Complaint From </p>
+             </td>
+	 <td style="padding:30px">
+            	<img src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshots%2FApplication%20UI%2FScreenshot_20180329-180501.png?alt=media&token=590ce710-d55c-41c6-8430-1b47eaa5ab6a" width="200" height="350" style="float: left; margin-right: 76%; margin-bottom: 0.5em;">
+		    <p> Notifications </p>
+             </td>
+	 <td style="padding:30px">
+            	<img src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshots%2FApplication%20UI%2FScreenshot_20180329-180619.png?alt=media&token=f8850b9c-cac1-43ec-9c8e-67eceab64f3a" width="200" height="350" style="float: left; margin-right: 76%; margin-bottom: 0.5em;">
+		    <p> AMC Office Info </p>
+             </td>
+	</tr>
 	  </table>
 </div>
+
+
 ## Motivation
 
 In the era of digitalization every information must be available to our fingertips to access it from anywhere around the globe. As of now the digitalization of everything is becoming an essential part of modern culture. Until now we were using the traditional method of data-warehousing which was too time consuming and complex. Thus in next step the data was globalized by various service providers like Google, Wikipedia which have the accessible database but not accessible to simplest extent, because using an interface is an easy task rather than searching in the vast data-flow. 
