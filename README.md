@@ -13,21 +13,26 @@ For backend Google Firebase, Google Cloud, Git, etc are used.
 
 ## SYSTEM FEATURES:
 
-### Ease of sending notification:
+### Ease of sending notification
 
-### Making use of mobile device feature:
+### Making use of mobile device feature
 
-### Availability to work offline:
+### Availability to work offline
 	
-### Works faster than websites:
+### Works faster than websites
 
-### Brand Presence:
+### Brand Presence
 
 ## Screenshots
 
 ### Application UI:
 
-<img  style='margin:300px;' src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshot_20180329-175917.png?alt=media&token=e2356a70-25a0-440b-9b2d-08768cafec1e" width="500" >
+<img  style='margin:300px;' src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshots%2FApplication%20UI%2FScreenshot_20180329-175917.png?alt=media&token=e425b6ea-6a7b-413d-aa1a-453b6691f19e" width="300" height="500" >
+<img  style='margin:300px;' src="" width="300" height="500" >
+<img  style='margin:300px;' src="" width="300" height="500" >
+<img  style='margin:300px;' src="" width="300" height="500" >
+<img  style='margin:300px;' src="" width="300" height="500" >
+
 
 ## Motivation
 
