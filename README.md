@@ -8,8 +8,8 @@ For backend Google Firebase, Google Cloud, Git, etc are used.
 
 ## SOFTWARE DEVELOPMENT TOOL
 
-### ANDROID STUDIO (IDE)
-### FIREBASE (DATABASE)
+### ANDROID STUDIO IDE
+### FIREBASE BACKEND - DATABASE
 
 ## SOFTWARE FEATURES:
 
@@ -27,15 +27,17 @@ For backend Google Firebase, Google Cloud, Git, etc are used.
 
 ### Application UserInterface:
 
-#### User Authentication
+#### User Authentication:
 
-<img  style='margin:300px;' src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshots%2FApplication%20UI%2FScreenshot_20180329-175917.png?alt=media&token=e425b6ea-6a7b-413d-aa1a-453b6691f19e" width="300" height="500" >
+<img  style='margin:300px;' src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshots%2FApplication%20UI%2FScreenshot_20180329-175917.png?alt=media&token=e425b6ea-6a7b-413d-aa1a-453b6691f19e" width="200" height="400" >
 
-#### User Dash-Board
+#### User Dash-Board:
 
-<img  style='margin:600px;' src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshots%2FApplication%20UI%2FScreenshot_20180329-180029.png?alt=media&token=5043f9f8-6cac-4f5e-b02c-7fbe243840d1" width="300" height="500" >
+<img  style='margin:600px;' src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshots%2FApplication%20UI%2FScreenshot_20180329-180029.png?alt=media&token=5043f9f8-6cac-4f5e-b02c-7fbe243840d1" width="200" height="400" >
 
-<img  style='margin:300px;' src="" width="300" height="500" >
+#### User Dash-Board Navigation-Drawer:
+
+<img  style='margin:300px;' src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshots%2FApplication%20UI%2FInkedScreenshot_20180329-180041_LI.jpg?alt=media&token=7d018324-63e6-4fb0-ba9c-832321ea8073" width="200" height="400" >
 <img  style='margin:300px;' src="" width="300" height="500" >
 <img  style='margin:300px;' src="" width="300" height="500" >
 
@@ -48,4 +50,4 @@ That's why the innovative way of personalization by using the interface provided
 
 ## Contributors
 
-Abhishek Bande
+# Abhishek Bande
