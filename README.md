@@ -28,7 +28,7 @@ FIREBASE BACKEND - DATABASE
 
 ### Application UserInterface:
 
-#### User Module
+#### User Module:
 
 <div id="image-table">
     <table>
@@ -92,7 +92,7 @@ FIREBASE BACKEND - DATABASE
 	  </table>
 </div>
 
-#### Admin Module
+#### Admin Module:
 
 <div id="image-table1">
     <table>
@@ -113,7 +113,35 @@ FIREBASE BACKEND - DATABASE
 	  </table>
 </div>
 
-## Motivation
+### Application Database(Firebase):
+
+<div id="image-table1">
+    <table>
+<tr>
+ <td style="padding:30px">
+            	<img src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshots%2FDatabase%20Firebase%2Fproject%20console.PNG?alt=media&token=c7228c67-0e8c-45f7-acf1-8191ce9b7f81"  height="350" style="float: left; margin-right: 76%; margin-bottom: 0.5em;">
+		    <p> Project Console </p>
+             </td>
+	 <td style="padding:30px">
+            	<img src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshots%2FDatabase%20Firebase%2FAdmini.PNG?alt=media&token=27bd7e53-81c0-4eed-b06e-cce6c218df5c"  height="350" style="float: left; margin-right: 76%; margin-bottom: 0.5em;">
+		    <p> Real TimeDatabase </p>
+             </td>
+	</tr>
+	    <tr>
+ <td style="padding:30px">
+            	<img src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshots%2FDatabase%20Firebase%2FStorage.PNG?alt=media&token=f52f7eab-a874-4d33-8df9-140fb04733cb"  height="350" style="float: left; margin-right: 76%; margin-bottom: 0.5em;">
+		    <p> Firebase Storage </p>
+             </td>
+	 <td style="padding:30px">
+            	<img src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshots%2FDatabase%20Firebase%2FPush%20Noti.PNG?alt=media&token=35ca0068-84a5-4049-959c-5148a691a083"  height="350" style="float: left; margin-right: 76%; margin-bottom: 0.5em;">
+		    <p> Push Notification </p>
+             </td>
+	</tr>
+	    
+	 	  </table>
+</div>
+
+## Motivation:
 
 In the era of digitalization every information must be available to our fingertips to access it from anywhere around the globe. As of now the digitalization of everything is becoming an essential part of modern culture. Until now we were using the traditional method of data-warehousing which was too time consuming and complex. Thus in next step the data was globalized by various service providers like Google, Wikipedia which have the accessible database but not accessible to simplest extent, because using an interface is an easy task rather than searching in the vast data-flow. 
 That's why the innovative way of personalization by using the interface provided through application. Thus we have decided to develop such environment that will come under the "Digital India" initiative proposed by Honourable P.M. Mr Narendra Modi. So we are developing an application to miniaturise the administrative load of Municipal Corporation of Amravati, this will serve various needs of local residents. 
