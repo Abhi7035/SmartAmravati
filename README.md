@@ -29,7 +29,7 @@ For backend Google Firebase, Google Cloud, Git, etc are used.
 
 #### User Authentication:
 
-<img  style='margin:300px;' src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshots%2FApplication%20UI%2FScreenshot_20180329-175917.png?alt=media&token=e425b6ea-6a7b-413d-aa1a-453b6691f19e" width="200" height="400" >
+<img  style='margin:300px;' src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshots%2FApplication%20UI%2FScreenshot_20180329-175917.png?alt=media&token=e425b6ea-6a7b-413d-aa1a-453b6691f19e" width="300" height="400" >
 
 #### User Dash-Board:
 
