@@ -41,14 +41,26 @@ FIREBASE BACKEND - DATABASE
              </td>
 		    <td style="padding:30px">
             	<img src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshots%2FApplication%20UI%2FInkedScreenshot_20180329-180041_LI.jpg?alt=media&token=7d018324-63e6-4fb0-ba9c-832321ea8073" width="200" height="350" style="float: left; margin-right: 76%; margin-bottom: 0.5em;">
-		    <p>User Navigation Drawer </p>
+		    <p> Navigation Drawer with user Profile </p>
              </td>   
         </tr>
-    </table>
+  
+ <tr>
+ <td style="padding:30px">
+            	<img src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshots%2FApplication%20UI%2FScreenshot_20180329-180149.png?alt=media&token=d000901a-d3ad-4276-bef6-0e0a00555840" width="200" height="350" style="float: left; margin-right: 76%; margin-bottom: 0.5em;">
+		    <p> AMC Administration Profiles </p>
+             </td>
+	 <td style="padding:30px">
+            	<img src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshots%2FApplication%20UI%2FScreenshot_20180329-180159.png?alt=media&token=bd2f310f-7053-40e1-bd50-723ab16cf186" width="200" height="350" style="float: left; margin-right: 76%; margin-bottom: 0.5em;">
+		    <p> Amravati City Information </p>
+             </td>
+	 <td style="padding:30px">
+            	<img src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshots%2FApplication%20UI%2FScreenshot_20180329-180210.png?alt=media&token=1af52b03-2c73-46e2-8a45-3645b76f661f" width="200" height="350" style="float: left; margin-right: 76%; margin-bottom: 0.5em;">
+		    <p> AMC Elected Profiles </p>
+             </td>
+	</tr>
+	  </table>
 </div>
-
-
-
 ## Motivation
 
 In the era of digitalization every information must be available to our fingertips to access it from anywhere around the globe. As of now the digitalization of everything is becoming an essential part of modern culture. Until now we were using the traditional method of data-warehousing which was too time consuming and complex. Thus in next step the data was globalized by various service providers like Google, Wikipedia which have the accessible database but not accessible to simplest extent, because using an interface is an easy task rather than searching in the vast data-flow. 
