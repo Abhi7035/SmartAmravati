@@ -28,6 +28,8 @@ FIREBASE BACKEND - DATABASE
 
 ### Application UserInterface:
 
+#### User Module
+
 <div id="image-table">
     <table>
 	    <tr>
@@ -90,6 +92,26 @@ FIREBASE BACKEND - DATABASE
 	  </table>
 </div>
 
+#### Admin Module
+
+<div id="image-table1">
+    <table>
+<tr>
+ <td style="padding:30px">
+            	<img src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshots%2FApplication%20UI%2FScreenshot_20180329-181343.png?alt=media&token=9219c38f-b454-41da-abe7-8b943eb0891b" width="200" height="350" style="float: left; margin-right: 76%; margin-bottom: 0.5em;">
+		    <p> Admin Dash-Board </p>
+             </td>
+	 <td style="padding:30px">
+            	<img src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshots%2FApplication%20UI%2FScreenshot_20180329-181351.png?alt=media&token=6a1f3de1-376d-461c-b629-baaa61b9cd0d" width="200" height="350" style="float: left; margin-right: 76%; margin-bottom: 0.5em;">
+		    <p> Notifications Post </p>
+             </td>
+	 <td style="padding:30px">
+            	<img src="https://firebasestorage.googleapis.com/v0/b/smartamc-14986.appspot.com/o/Screenshots%2FApplication%20UI%2FScreenshot_20180329-181405.png?alt=media&token=b1e42e7d-f383-4220-a706-24087e284d6c" width="200" height="350" style="float: left; margin-right: 76%; margin-bottom: 0.5em;">
+		    <p> Profile Setup </p>
+             </td>
+	</tr>
+	  </table>
+</div>
 
 ## Motivation
 
